@@ -84,9 +84,19 @@
                 <label>Difficulty<select id="difficulty"><option>Foundation</option><option selected>Balanced</option><option>Challenge</option></select></label>
                 <label>Paper title<input id="paper-title" value="Chapter Assessment" /></label>
               </div>
+              <div class="split-settings" id="split-settings">
+                <div>
+                  <h4>Theory and numerical split</h4>
+                  <p>Choose how the total marks should be divided.</p>
+                </div>
+                <label>Theory marks<input id="theory-marks" type="number" min="0" max="100" value="24" /></label>
+                <label>Numerical marks<input id="numerical-marks" type="number" min="0" max="100" value="16" /></label>
+              </div>
+              <p class="split-error" id="split-error"></p>
             </div>
 
             <button class="generate-btn" type="submit">Generate question paper <span>↗</span></button>
+            <p class="reference-status" id="reference-status">Reference archive check runs before each paper is prepared.</p>
           </form>
 
           <aside class="summary-panel">
@@ -97,6 +107,7 @@
               <div><dt>Subject</dt><dd id="sum-subject">Physics</dd></div>
               <div><dt>Chapters</dt><dd id="sum-chapters">2 selected</dd></div>
               <div><dt>Total marks</dt><dd id="sum-marks">40 marks</dd></div>
+              <div id="sum-split-row"><dt>Marks split</dt><dd id="sum-split">24 theory · 16 numerical</dd></div>
               <div><dt>Est. questions</dt><dd id="sum-questions">11 questions</dd></div>
             </dl>
             <p class="summary-note">Questions are freshly assembled from syllabus-aligned templates.</p>
