@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paperwise | IGCSE Paper Builder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#"><span class="brand-mark">P</span><span>paperwise</span></a>
+      <nav>
+        <a href="#builder">Create paper</a>
+        <a href="#library">Question bank</a>
+        <a href="#recent">My papers</a>
+      </nav>
+      <button class="profile" type="button"><span>BM</span>Bhumi Ma'am</button>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">IGCSE · GRADE 10 · INDIA</p>
+          <h1>Build the right paper,<br /><em>chapter by chapter.</em></h1>
+          <p class="hero-text">Create balanced, classroom-ready assessments for Physics, Chemistry and Mathematics in minutes.</p>
+          <div class="hero-actions">
+            <a class="primary-btn" href="#builder">Create a paper <span>→</span></a>
+            <a class="text-link" href="#how">See how it works <span>↘</span></a>
+          </div>
+        </div>
+        <aside class="hero-card">
+          <span class="card-label">TODAY'S OVERVIEW</span>
+          <div class="stat-grid">
+            <div><b>24</b><small>Papers created</small></div>
+            <div><b>186</b><small>Questions used</small></div>
+            <div><b>3</b><small>Subjects covered</small></div>
+          </div>
+          <div class="progress-block">
+            <div><span>Question bank readiness</span><b>92%</b></div>
+            <i><span></span></i>
+          </div>
+        </aside>
+        <div class="hero-orbit orbit-one"></div>
+        <div class="hero-orbit orbit-two"></div>
+      </section>
+
+      <section class="builder-section" id="builder">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">PAPER BUILDER</p>
+            <h2>Create your question paper</h2>
+          </div>
+          <p>Choose a subject, pick one or more chapters and set the marks. Paperwise handles the rest.</p>
+        </div>
+
+        <div class="builder-layout">
+          <form class="builder-panel" id="paper-form">
+            <div class="step-block">
+              <div class="step-title"><span>01</span><div><h3>Choose a subject</h3><p>Select the syllabus you want to assess.</p></div></div>
+              <div class="subject-grid" id="subject-grid"></div>
+            </div>
+
+            <div class="step-block">
+              <div class="step-title"><span>02</span><div><h3>Select chapters</h3><p>Mix chapters freely, or type your own topic.</p></div></div>
+              <div class="chapter-search">
+                <input id="chapter-input" placeholder="Search or add a chapter..." autocomplete="off" />
+                <button id="add-custom" type="button">+ Add</button>
+              </div>
+              <div class="chapter-options" id="chapter-options"></div>
+              <div class="selected-wrap">
+                <label>SELECTED CHAPTERS</label>
+                <div class="selected-chapters" id="selected-chapters"></div>
+              </div>
+            </div>
+
+            <div class="step-block compact">
+              <div class="step-title"><span>03</span><div><h3>Paper settings</h3><p>Fine-tune the paper to suit your class.</p></div></div>
+              <div class="settings-grid">
+                <label>Total marks<input id="marks" type="number" min="10" max="100" value="40" /></label>
+                <label>Duration<select id="duration"><option>45 minutes</option><option selected>60 minutes</option><option>75 minutes</option><option>90 minutes</option></select></label>
+                <label>Difficulty<select id="difficulty"><option>Foundation</option><option selected>Balanced</option><option>Challenge</option></select></label>
+                <label>Paper title<input id="paper-title" value="Chapter Assessment" /></label>
+              </div>
+            </div>
+
+            <button class="generate-btn" type="submit">Generate question paper <span>↗</span></button>
+          </form>
+
+          <aside class="summary-panel">
+            <p class="eyebrow">LIVE SUMMARY</p>
+            <h3>Your paper at a glance</h3>
+            <div class="paper-icon">✦<span>IGCSE</span></div>
+            <dl>
+              <div><dt>Subject</dt><dd id="sum-subject">Physics</dd></div>
+              <div><dt>Chapters</dt><dd id="sum-chapters">2 selected</dd></div>
+              <div><dt>Total marks</dt><dd id="sum-marks">40 marks</dd></div>
+              <div><dt>Est. questions</dt><dd id="sum-questions">11 questions</dd></div>
+            </dl>
+            <p class="summary-note">Questions are freshly assembled from syllabus-aligned templates.</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="feature-strip" id="how">
+        <p class="eyebrow">BUILT FOR TEACHERS</p>
+        <h2>Less formatting.<br /><em>More teaching.</em></h2>
+        <div class="feature-grid">
+          <article><span>01</span><h3>Syllabus aligned</h3><p>Built around current Cambridge IGCSE topic structures.</p></article>
+          <article><span>02</span><h3>Perfectly balanced</h3><p>Mix recall, application and structured questions.</p></article>
+          <article><span>03</span><h3>Print ready</h3><p>Preview the paper and answer key before printing.</p></article>
+        </div>
+      </section>
+    </main>
+
+    <section class="preview-overlay" id="preview" aria-hidden="true">
+      <div class="preview-toolbar">
+        <div><strong>Paper preview</strong><span id="preview-subtitle">Physics · 40 marks</span></div>
+        <div class="toolbar-actions">
+          <button id="answer-toggle" type="button">Show answer key</button>
+          <button id="regenerate" type="button">Regenerate</button>
+          <button id="print-paper" class="print-btn" type="button">Print / Save PDF</button>
+          <button id="close-preview" class="close-btn" type="button">×</button>
+        </div>
+      </div>
+      <div class="paper-shell">
+        <article class="paper-page" id="paper-output"></article>
+        <article class="paper-page answer-page hidden" id="answer-output"></article>
+      </div>
+    </section>
+
+    <footer>
+      <a class="brand" href="#"><span class="brand-mark">P</span><span>paperwise</span></a>
+      <p>Thoughtful assessments for curious classrooms.</p>
+      <span>Cambridge IGCSE-aligned · Made for teachers in India</span>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
