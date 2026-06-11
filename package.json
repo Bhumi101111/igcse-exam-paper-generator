@@ -1,0 +1,9 @@
+{
+  "name": "igcse-exam-paper-generator",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static site + Netlify functions for the Paperwise IGCSE paper builder.",
+  "dependencies": {
+    "pdf-parse": "1.1.1"
+  }
+}
