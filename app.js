@@ -32,6 +32,11 @@ const curriculum = {
     "3. Chemical bonding",
     "4. Chemical formulae and equations",
     "5. Chemical calculations",
+    "6. Electrochemistry",
+    "7. Chemical energetics",
+    "8. Rates of reaction",
+    "9. Reversible reactions and equilibrium",
+    "10. Redox reactions",
     "11. Acids and bases",
     "12. Preparation of salts",
     "13. The Periodic Table",
@@ -271,6 +276,11 @@ const chemistryTheoryPrompts = {
   "3. Chemical bonding":["Describe ionic bonding.","Describe covalent bonding.","Explain why graphite conducts electricity.","Explain why ionic compounds conduct when molten but not when solid.","Describe metallic bonding."],
   "4. Chemical formulae and equations":["State what a chemical equation represents.","Explain why equations must be balanced.","Define the term relative molecular mass.","State the meaning of the state symbol (aq).","Describe how to construct a word equation from a reaction description."],
   "5. Chemical calculations":["Define one mole of a substance.","State the equation linking moles, mass and relative formula mass.","Explain why balanced equations are needed for reacting-mass calculations.","Define concentration in mol/dm³.","Describe how to convert a volume from cm³ to dm³."],
+  "6. Electrochemistry":["Define electrolysis.","State what is meant by an electrolyte.","Explain why ionic compounds only conduct electricity when molten or dissolved.","State the products of electrolysis of molten lead(II) bromide.","Describe what happens at the cathode during electrolysis."],
+  "7. Chemical energetics":["Define an exothermic reaction.","Define an endothermic reaction.","State what happens to the temperature of the surroundings during an exothermic reaction.","Describe how bond breaking and bond making relate to energy change.","Explain what is meant by activation energy."],
+  "8. Rates of reaction":["State four factors that affect the rate of a reaction.","Explain how an increase in temperature changes the rate of a reaction.","Explain how an increase in surface area changes the rate of a reaction.","Define a catalyst.","Describe one method for measuring the rate of a reaction that produces a gas."],
+  "9. Reversible reactions and equilibrium":["State what is meant by a reversible reaction.","Describe what is meant by dynamic equilibrium.","Explain the effect of increasing pressure on a gaseous equilibrium with fewer moles of gas on the product side.","State the effect of increasing temperature on an endothermic equilibrium.","Describe the test for water using anhydrous copper(II) sulfate."],
+  "10. Redox reactions":["Define oxidation in terms of oxygen.","Define reduction in terms of oxygen.","Define oxidation in terms of electron transfer.","Define reduction in terms of electron transfer.","Identify the oxidising and reducing agents in a given redox reaction."],
   "11. Acids and bases":["Define an acid in terms of hydrogen ions.","Define a base.","State the colour of universal indicator in a neutral solution.","Describe a neutralisation reaction.","Explain the difference between a strong acid and a weak acid."],
   "12. Preparation of salts":["Describe how to prepare a soluble salt from an acid and an excess insoluble base.","Explain why excess solid is added during salt preparation.","Describe how crystals are obtained from a salt solution.","State how to prepare an insoluble salt.","Explain why crystals are dried after filtration."],
   "13. The Periodic Table":["State how elements are arranged in the Periodic Table.","Describe the trend in reactivity down Group I.","Describe the properties of noble gases.","Explain why elements in the same group have similar chemical properties.","State one property of transition elements."],
@@ -284,12 +294,301 @@ const chemistryTheoryPrompts = {
   "21. Experimental design and separation techniques":["Describe filtration.","Explain how simple distillation separates a solvent from a solution.","State the purpose of chromatography.","Explain how to improve the reliability of an experiment.","Describe how fractional distillation separates liquids."],
   "22. Chemical analysis":["Describe the test for hydrogen gas.","Describe the test for oxygen gas.","State the flame-test colour for sodium ions.","Describe how to test for carbon dioxide.","Explain the meaning of an Rf value in chromatography."]
 };
+const chemistrySupplements = {
+  "1. States of matter":{
+    Theory:[
+      ["Describe what happens to the arrangement and movement of particles when a solid melts.",3,"Particles gain energy, vibrate more, the regular lattice breaks down and particles can slide past one another."],
+      ["Explain, using the kinetic particle model, why a gas exerts pressure on the walls of its container.",3,"Gas particles move rapidly in random directions and collide with the walls; each collision exerts a force, producing pressure."],
+      ["Explain why the temperature of pure water remains constant while it boils.",2,"Energy supplied is used to overcome intermolecular forces between particles, not to increase their kinetic energy."],
+      ["State two differences between the particles in a liquid and the particles in a gas.",2,"Liquid particles are close together with weak forces; gas particles are far apart with negligible forces. Liquid particles move slower than gas particles."]
+    ],
+    Numerical:[
+      ["A sample of ice at −10 °C is heated to 105 °C. Calculate the total temperature change.",2,"Total change = 105 − (−10) = 115 °C."],
+      ["A gas occupies 250 cm³ at constant temperature. The pressure is doubled. Calculate the new volume using p₁V₁ = p₂V₂.",3,"V₂ = p₁V₁/p₂ = (1 × 250)/2 = 125 cm³."],
+      ["A liquid of mass 80 g cools from 75 °C to 25 °C. Calculate the temperature change.",1,"Temperature change = 75 − 25 = 50 °C."]
+    ]
+  },
+  "2. Atomic structure":{
+    Theory:[
+      ["Describe the structure of an atom in terms of its sub-atomic particles and their location.",3,"Protons and neutrons are in the nucleus at the centre; electrons orbit the nucleus in shells. Most of the atom is empty space."],
+      ["State what is meant by isotopes of an element.",2,"Atoms of the same element with the same proton number but different numbers of neutrons."],
+      ["Explain why isotopes of the same element have identical chemical properties.",2,"They have the same number of electrons in the outer shell, which determines chemical behaviour."],
+      ["State the electronic configuration of a chlorine atom (proton number 17).",2,"2,8,7."]
+    ],
+    Numerical:[
+      ["An atom has proton number 19 and nucleon number 39. Calculate the number of neutrons.",2,"Neutrons = 39 − 19 = 20."],
+      ["An ion of magnesium is Mg²⁺. Magnesium has proton number 12. Calculate the number of electrons in the ion.",2,"Electrons = 12 − 2 = 10."],
+      ["A sample of chlorine contains 75% ³⁵Cl and 25% ³⁷Cl. Calculate the relative atomic mass.",3,"Ar = (75 × 35 + 25 × 37)/100 = 35.5."]
+    ]
+  },
+  "3. Chemical bonding":{
+    Theory:[
+      ["Describe how an ionic bond is formed between sodium and chlorine.",3,"Sodium transfers one electron to chlorine. Sodium becomes Na⁺ and chlorine becomes Cl⁻. The oppositely charged ions are attracted by electrostatic forces."],
+      ["Explain why ionic compounds have high melting points.",2,"There are strong electrostatic forces of attraction between oppositely charged ions, requiring a large amount of energy to overcome."],
+      ["Explain why graphite can conduct electricity but diamond cannot.",3,"In graphite each carbon atom forms three covalent bonds, leaving one delocalised electron that can move along the layers. In diamond all four outer electrons are used in covalent bonds, so there are no free electrons."],
+      ["Describe metallic bonding in a metal.",3,"A lattice of positive metal ions surrounded by a 'sea' of delocalised electrons; the electrostatic attraction between the ions and the electrons holds the structure together."]
+    ],
+    Numerical:[
+      ["A molecule of ethanol is C₂H₅OH. Calculate the total number of atoms in one molecule.",2,"2 + 5 + 1 + 1 = 9 atoms."],
+      ["An ionic compound has the formula Al₂O₃. State the ratio of aluminium ions to oxide ions.",1,"2 : 3."],
+      ["Calculate the number of electrons shared in the double bond of an oxygen molecule, O₂.",1,"4 electrons (2 pairs)."]
+    ]
+  },
+  "4. Chemical formulae and equations":{
+    Theory:[
+      ["Explain why a chemical equation must be balanced.",2,"Atoms are neither created nor destroyed during a reaction, so the number of atoms of each element must be the same on both sides."],
+      ["State the meaning of the state symbols (s), (l), (g) and (aq).",2,"(s) solid, (l) liquid, (g) gas, (aq) aqueous (dissolved in water)."],
+      ["Write a balanced symbol equation for the reaction of magnesium with oxygen.",2,"2Mg + O₂ → 2MgO."],
+      ["Write a balanced symbol equation for the complete combustion of methane.",2,"CH₄ + 2O₂ → CO₂ + 2H₂O."]
+    ],
+    Numerical:[
+      ["Calculate the relative formula mass of Mg(NO₃)₂. [Ar: Mg=24, N=14, O=16]",3,"24 + 2(14 + 3×16) = 24 + 2(62) = 148."],
+      ["Calculate the relative formula mass of H₂SO₄. [Ar: H=1, S=32, O=16]",2,"2 + 32 + 64 = 98."],
+      ["In the equation 2H₂ + O₂ → 2H₂O, state the ratio of moles of hydrogen to moles of water formed.",1,"1 : 1."]
+    ]
+  },
+  "5. Chemical calculations":{
+    Theory:[
+      ["Define the term mole.",2,"The amount of substance containing the same number of particles as the number of atoms in 12 g of carbon-12 (6.02 × 10²³)."],
+      ["State the equation linking concentration, amount in moles and volume in dm³.",2,"concentration (mol/dm³) = amount (mol) / volume (dm³)."],
+      ["Describe how to convert a volume in cm³ to dm³.",1,"Divide by 1000."],
+      ["State the volume occupied by one mole of any gas at room temperature and pressure.",1,"24 dm³ (24 000 cm³)."]
+    ],
+    Numerical:[
+      ["Calculate the number of moles in 24 g of magnesium. [Ar: Mg=24]",2,"moles = mass/Ar = 24/24 = 1 mol."],
+      ["Calculate the mass of 0.25 mol of CaCO₃. [Mr=100]",2,"mass = moles × Mr = 0.25 × 100 = 25 g."],
+      ["Calculate the concentration when 0.10 mol of NaOH is dissolved in 250 cm³ of water.",3,"Volume = 0.250 dm³. Concentration = 0.10/0.250 = 0.40 mol/dm³."],
+      ["Calculate the volume of 0.50 mol of a gas at r.t.p.",2,"Volume = 0.50 × 24 = 12 dm³."]
+    ]
+  },
+  "6. Electrochemistry":{
+    Theory:[
+      ["Define electrolysis.",2,"The decomposition of an ionic compound, when molten or in aqueous solution, by the passage of an electric current."],
+      ["Explain why ionic compounds only conduct electricity when molten or dissolved in water.",2,"The ions must be free to move to carry the charge; in the solid state the ions are held in a lattice and cannot move."],
+      ["State the product formed at the cathode during the electrolysis of molten lead(II) bromide.",1,"Lead."],
+      ["State the product formed at the anode during the electrolysis of molten lead(II) bromide.",1,"Bromine."]
+    ],
+    Numerical:[
+      ["A current of 0.50 A flows through an electrolytic cell for 200 s. Calculate the charge that passes.",2,"Q = It = 0.50 × 200 = 100 C."],
+      ["A charge of 480 C passes in 120 s. Calculate the current.",2,"I = Q/t = 480/120 = 4.0 A."],
+      ["A current of 2.0 A flows for 5.0 minutes. Calculate the charge transferred.",3,"t = 5.0 × 60 = 300 s. Q = It = 2.0 × 300 = 600 C."]
+    ]
+  },
+  "7. Chemical energetics":{
+    Theory:[
+      ["State whether bond breaking is endothermic or exothermic.",1,"Endothermic."],
+      ["State whether bond making is endothermic or exothermic.",1,"Exothermic."],
+      ["Define activation energy.",2,"The minimum energy that colliding particles must have for a reaction to occur."],
+      ["Explain why a reaction is exothermic if the energy released in bond making is greater than the energy absorbed in bond breaking.",2,"More energy is released to the surroundings than is taken in, so the overall enthalpy change is negative and the surroundings warm up."]
+    ],
+    Numerical:[
+      ["A reaction absorbs 30 kJ of energy to break bonds and releases 80 kJ when new bonds form. Calculate the overall energy change.",3,"ΔH = 30 − 80 = −50 kJ (exothermic)."],
+      ["The combustion of 1 mol of fuel releases 400 kJ. Calculate the energy released by 2.5 mol.",2,"Energy = 400 × 2.5 = 1000 kJ."],
+      ["A reaction releases 24 kJ from 0.20 mol of reactant. Calculate the energy released per mole.",2,"24/0.20 = 120 kJ/mol."]
+    ]
+  },
+  "8. Rates of reaction":{
+    Theory:[
+      ["State four factors that affect the rate of a chemical reaction.",2,"Temperature, concentration (or pressure for gases), surface area, presence of a catalyst."],
+      ["Explain, using collision theory, why increasing the concentration of a reactant increases the rate of reaction.",3,"There are more reactant particles in a given volume, so there are more frequent collisions and more successful collisions per second."],
+      ["Explain why increasing the surface area of a solid reactant increases the rate of reaction.",2,"More particles of the solid are exposed at the surface, so there are more collisions per second between the reactants."],
+      ["Define a catalyst.",2,"A substance that increases the rate of a reaction without being chemically changed at the end of the reaction; it provides an alternative pathway with lower activation energy."]
+    ],
+    Numerical:[
+      ["A reaction produces 48 cm³ of gas in 24 s. Calculate the average rate of reaction in cm³/s.",2,"rate = 48/24 = 2.0 cm³/s."],
+      ["A reaction loses 1.2 g of mass in 60 s. Calculate the average rate of mass loss in g/s.",2,"rate = 1.2/60 = 0.020 g/s."],
+      ["100 cm³ of gas is collected over 5 minutes. Calculate the average rate in cm³/min.",2,"rate = 100/5 = 20 cm³/min."]
+    ]
+  },
+  "9. Reversible reactions and equilibrium":{
+    Theory:[
+      ["State what is meant by a reversible reaction.",2,"A reaction in which products can react together to re-form the original reactants under the right conditions."],
+      ["Describe what is meant by dynamic equilibrium.",3,"The forward and reverse reactions occur at the same rate, so the concentrations of reactants and products remain constant."],
+      ["State the effect of increasing temperature on an exothermic equilibrium position.",2,"The position of equilibrium shifts in the endothermic (reverse) direction, decreasing the yield of products."],
+      ["Describe the test using anhydrous copper(II) sulfate to show that a liquid contains water.",2,"Add the liquid to white anhydrous copper(II) sulfate; if water is present the solid turns blue."]
+    ],
+    Numerical:[
+      ["At equilibrium a mixture contains 0.40 mol of reactant A and 0.10 mol of product B. Calculate the total amount of substance in the mixture.",1,"Total = 0.40 + 0.10 = 0.50 mol."],
+      ["The forward rate at equilibrium is 0.05 mol/s. State the reverse rate.",1,"0.05 mol/s (equal at equilibrium)."],
+      ["At equilibrium 30% of the original 2.0 mol of reactant has been converted to product. Calculate the amount of reactant remaining.",2,"Reactant remaining = 2.0 × 0.70 = 1.4 mol."]
+    ]
+  },
+  "10. Redox reactions":{
+    Theory:[
+      ["Define oxidation in terms of electron transfer.",1,"Loss of electrons."],
+      ["Define reduction in terms of electron transfer.",1,"Gain of electrons."],
+      ["State what is meant by an oxidising agent.",2,"A substance that accepts electrons from another substance, causing that substance to be oxidised."],
+      ["In the reaction Zn + CuSO₄ → ZnSO₄ + Cu, identify the species that has been oxidised and the species that has been reduced.",2,"Zinc has been oxidised (loses electrons to form Zn²⁺); copper(II) ions have been reduced (gain electrons to form Cu)."]
+    ],
+    Numerical:[
+      ["An iron ion changes from Fe³⁺ to Fe²⁺. State the number of electrons gained per ion.",1,"1 electron."],
+      ["A magnesium atom forms a Mg²⁺ ion. State the number of electrons lost per atom.",1,"2 electrons."],
+      ["In the half-equation Al³⁺ + 3e⁻ → Al, calculate the number of moles of electrons needed to produce 0.50 mol of aluminium.",2,"Moles of electrons = 3 × 0.50 = 1.5 mol."]
+    ]
+  },
+  "11. Acids and bases":{
+    Theory:[
+      ["Define an acid in terms of the hydrogen ion (H⁺).",2,"A substance that produces H⁺ ions in aqueous solution."],
+      ["Define an alkali.",2,"A soluble base that produces hydroxide ions (OH⁻) in aqueous solution."],
+      ["State the colour of methyl orange in acidic and alkaline solution.",2,"Red in acid; yellow in alkali."],
+      ["Explain the difference between a strong acid and a weak acid.",3,"A strong acid is fully ionised in water; a weak acid is only partially ionised in water."]
+    ],
+    Numerical:[
+      ["A solution has [H⁺] = 1 × 10⁻³ mol/dm³. State its pH.",1,"pH = 3."],
+      ["Calculate the volume of 0.20 mol/dm³ NaOH needed to neutralise 25.0 cm³ of 0.10 mol/dm³ HCl.",3,"Moles HCl = 0.10 × 0.025 = 0.0025. Volume NaOH = 0.0025/0.20 = 0.0125 dm³ = 12.5 cm³."],
+      ["A solution of pH 2 is diluted ten times. State the new pH.",1,"pH = 3."]
+    ]
+  },
+  "12. Preparation of salts":{
+    Theory:[
+      ["Describe how to prepare dry crystals of copper(II) sulfate from copper(II) oxide and dilute sulfuric acid.",4,"Warm the acid, add excess copper(II) oxide, filter off unreacted solid, heat the filtrate to concentrate, leave to crystallise, filter and dry the crystals."],
+      ["Explain why excess insoluble base is added during salt preparation.",2,"To ensure that all the acid reacts, giving a pure solution of the salt."],
+      ["Describe how to prepare an insoluble salt such as barium sulfate.",3,"Mix solutions of two soluble salts (e.g. barium chloride and sodium sulfate); filter to collect the precipitate; wash with distilled water and dry."],
+      ["Suggest why crystals must be dried gently rather than strongly heated.",2,"Strong heating may cause the crystals to decompose or lose water of crystallisation."]
+    ],
+    Numerical:[
+      ["A student evaporates 200 g of salt solution and recovers 15 g of dry salt. Calculate the mass of water removed.",2,"Water removed = 200 − 15 = 185 g."],
+      ["25 cm³ of 0.10 mol/dm³ HCl reacts with NaOH. Calculate the moles of HCl used.",2,"Moles = 0.10 × 0.025 = 0.0025 mol."],
+      ["A precipitation reaction yields 4.66 g of BaSO₄ from a theoretical mass of 5.83 g. Calculate the percentage yield.",2,"Yield = 4.66/5.83 × 100 = 80%."]
+    ]
+  },
+  "13. The Periodic Table":{
+    Theory:[
+      ["Describe how elements are arranged in the modern Periodic Table.",2,"In order of increasing proton number, in groups (vertical columns) and periods (horizontal rows)."],
+      ["Describe the trend in reactivity down Group I.",3,"Reactivity increases down the group because the outer electron is further from the nucleus and is more easily lost."],
+      ["State three physical properties of transition elements.",3,"High density; high melting point; form coloured compounds; act as catalysts; show variable oxidation states (any three)."],
+      ["Explain why noble gases are unreactive.",2,"They have a full outer shell of electrons and so do not need to gain, lose or share electrons."]
+    ],
+    Numerical:[
+      ["An element is in Group V, Period 3. Calculate the number of outer electrons it has.",1,"5 outer electrons."],
+      ["An atom of an element has electronic configuration 2,8,7. State its group and period.",2,"Group VII, Period 3."],
+      ["A halogen with proton number 17 reacts with sodium. Write the formula of the salt formed.",1,"NaCl."]
+    ]
+  },
+  "14. Metallic elements and alloys":{
+    Theory:[
+      ["State three typical physical properties of metals.",3,"High melting and boiling points; good conductors of heat and electricity; malleable; ductile; shiny when polished (any three)."],
+      ["Explain why alloys are usually harder than the pure metals from which they are made.",3,"The added atoms are a different size and disrupt the regular lattice, so layers cannot slide over each other as easily."],
+      ["Explain why metals are good conductors of electricity.",2,"They contain delocalised electrons that are free to move through the metal lattice and carry charge."],
+      ["State one use of aluminium that depends on its low density.",1,"Making aircraft bodies or overhead power cables."]
+    ],
+    Numerical:[
+      ["An alloy contains 70% copper and 30% zinc by mass. Calculate the mass of copper in 250 g of the alloy.",2,"Mass = 0.70 × 250 = 175 g."],
+      ["A piece of brass of mass 80 g contains 60 g of copper. Calculate the percentage of zinc.",2,"Zinc = 80 − 60 = 20 g. Percentage = 20/80 × 100 = 25%."],
+      ["Calculate the mass of tin in 500 g of solder that is 40% tin by mass.",2,"Mass = 0.40 × 500 = 200 g."]
+    ]
+  },
+  "15. Reactivity of metals":{
+    Theory:[
+      ["Describe the observations when sodium is added to cold water.",3,"Sodium floats, melts into a ball, fizzes and moves rapidly across the surface; a colourless gas is produced and the solution becomes alkaline."],
+      ["Explain how a displacement reaction can be used to compare the reactivity of two metals.",3,"A more reactive metal will displace a less reactive metal from a solution of its salt; the observation (colour change, deposit) confirms the order."],
+      ["Place the following metals in order of decreasing reactivity: copper, magnesium, zinc, iron.",2,"Magnesium > zinc > iron > copper."],
+      ["Explain why gold is found in its native state in the Earth's crust.",2,"Gold is very unreactive and does not readily form compounds, so it occurs as the uncombined element."]
+    ],
+    Numerical:[
+      ["A 2.4 g sample of magnesium reacts completely with excess dilute hydrochloric acid. Calculate the moles of magnesium used. [Ar Mg = 24]",2,"Moles = 2.4/24 = 0.10 mol."],
+      ["0.10 mol of magnesium reacts with HCl. Use Mg + 2HCl → MgCl₂ + H₂ to calculate the moles of hydrogen produced.",2,"Moles H₂ = 0.10 mol."],
+      ["Calculate the volume at r.t.p. of 0.10 mol of hydrogen gas.",2,"Volume = 0.10 × 24 = 2.4 dm³."]
+    ]
+  },
+  "16. Extraction and corrosion of metals":{
+    Theory:[
+      ["Explain why aluminium is extracted by electrolysis rather than by reduction with carbon.",3,"Aluminium is more reactive than carbon, so carbon cannot reduce its ore; electrolysis of molten aluminium oxide is used instead."],
+      ["State the two conditions required for iron to rust.",2,"Water (or moisture) and oxygen (air)."],
+      ["Describe how galvanising prevents rusting of iron.",3,"A coating of zinc is applied; the zinc forms a physical barrier and also provides sacrificial protection because zinc is more reactive than iron."],
+      ["Describe the role of carbon in the extraction of iron in the blast furnace.",3,"Carbon (coke) burns in air to form carbon monoxide, which reduces iron(III) oxide to iron."]
+    ],
+    Numerical:[
+      ["A 200 g sample of iron ore contains 70% iron(III) oxide. Calculate the mass of iron(III) oxide.",2,"Mass = 0.70 × 200 = 140 g."],
+      ["Calculate the maximum mass of iron that can be obtained from 160 g of Fe₂O₃. [Mr Fe₂O₃ = 160, Ar Fe = 56]",3,"Moles Fe₂O₃ = 1; moles Fe = 2; mass Fe = 2 × 56 = 112 g."],
+      ["An iron bar of mass 50 g loses 0.50 g due to rusting. Calculate the percentage mass loss.",2,"% loss = 0.50/50 × 100 = 1.0%."]
+    ]
+  },
+  "17. Chemistry of our environment":{
+    Theory:[
+      ["State two greenhouse gases and one human activity that increases their concentration.",3,"Carbon dioxide (from burning fossil fuels) and methane (from livestock or landfill)."],
+      ["Describe how sulfur dioxide is produced and how it contributes to acid rain.",3,"Sulfur dioxide is produced when fossil fuels containing sulfur are burned; it dissolves in water in clouds to form sulfurous and sulfuric acid, which falls as acid rain."],
+      ["State one harmful effect of carbon monoxide on the human body.",2,"Carbon monoxide binds to haemoglobin and reduces the oxygen-carrying capacity of the blood."],
+      ["Describe one method used to reduce emissions of sulfur dioxide from power stations.",2,"Flue gas desulfurisation: the gases are passed through calcium oxide or calcium carbonate which reacts with the sulfur dioxide."]
+    ],
+    Numerical:[
+      ["The concentration of CO₂ in the atmosphere rises from 280 ppm to 420 ppm. Calculate the increase.",1,"420 − 280 = 140 ppm."],
+      ["A power station releases 5000 tonnes of CO₂ per day. Calculate the mass released in one week.",2,"5000 × 7 = 35 000 tonnes."],
+      ["A sample of fuel contains 2.0% sulfur by mass. Calculate the mass of sulfur in 500 kg of fuel.",2,"Mass = 0.020 × 500 = 10 kg."]
+    ]
+  },
+  "18. Introduction to organic chemistry":{
+    Theory:[
+      ["Define a hydrocarbon.",2,"A compound containing only hydrogen and carbon atoms."],
+      ["State the general formula of the alkane homologous series.",1,"CₙH₂ₙ₊₂."],
+      ["State the general formula of the alkene homologous series.",1,"CₙH₂ₙ."],
+      ["Describe the test that distinguishes between an alkane and an alkene.",3,"Add bromine water: an alkane gives no colour change (stays orange); an alkene decolourises the bromine water (turns colourless)."]
+    ],
+    Numerical:[
+      ["Calculate the number of hydrogen atoms in an alkane with 5 carbon atoms.",2,"H atoms = 2(5) + 2 = 12."],
+      ["Calculate the number of hydrogen atoms in an alkene with 4 carbon atoms.",2,"H atoms = 2(4) = 8."],
+      ["Calculate the relative formula mass of ethane (C₂H₆). [Ar: C=12, H=1]",2,"Mr = 2(12) + 6(1) = 30."]
+    ]
+  },
+  "19. Reactions of organic compounds":{
+    Theory:[
+      ["Write a balanced equation for the complete combustion of ethanol.",2,"C₂H₅OH + 3O₂ → 2CO₂ + 3H₂O."],
+      ["State the products of fermentation of glucose and the conditions required.",3,"Glucose is converted to ethanol and carbon dioxide using yeast at about 25–35 °C in the absence of oxygen."],
+      ["Describe the reaction between ethene and bromine water, including the colour change observed.",2,"Ethene decolourises bromine water (orange to colourless) as 1,2-dibromoethane is formed."],
+      ["State the conditions required for the catalytic cracking of long-chain hydrocarbons.",2,"High temperature (~600 °C) and a catalyst (e.g. silica/alumina or zeolite)."]
+    ],
+    Numerical:[
+      ["Calculate the mass of carbon dioxide produced when 4.6 g of ethanol (Mr=46) is completely combusted. [Mr CO₂ = 44]",3,"Moles ethanol = 4.6/46 = 0.10. Moles CO₂ = 0.20. Mass = 0.20 × 44 = 8.8 g."],
+      ["A fermentation produces 23 g of ethanol from 60 g of glucose. Calculate the percentage yield given a theoretical mass of 30.7 g.",2,"Yield = 23/30.7 × 100 = 75%."],
+      ["State the volume at r.t.p. of 0.50 mol of CO₂.",2,"Volume = 0.50 × 24 = 12 dm³."]
+    ]
+  },
+  "20. Petrochemicals and polymers":{
+    Theory:[
+      ["Define addition polymerisation.",2,"A reaction in which many small unsaturated molecules (monomers) join together to form a long-chain molecule (polymer) with no other product."],
+      ["Draw the repeat unit of poly(ethene).",2,"–(CH₂–CH₂)– repeating unit."],
+      ["State two environmental problems caused by disposing of plastics in landfill.",2,"They are non-biodegradable and remain for many years; they may release toxic chemicals or take up large amounts of space."],
+      ["State one advantage of recycling plastics.",1,"Reduces use of finite crude oil resources and reduces waste in landfill."]
+    ],
+    Numerical:[
+      ["A polymer is made from 2500 monomer units. State the number of repeating units in the polymer chain.",1,"2500 repeating units."],
+      ["Calculate the relative molecular mass of poly(ethene) made from 1000 ethene monomers (Mr ethene = 28).",2,"Mr = 1000 × 28 = 28 000."],
+      ["A polymer sample of mass 56 g is formed from ethene (Mr = 28). Calculate the number of monomer units used.",2,"Moles = 56/28 = 2; number of monomers = 2 × 6.02 × 10²³ ≈ 1.2 × 10²⁴."]
+    ]
+  },
+  "21. Experimental design and separation techniques":{
+    Theory:[
+      ["Describe how filtration is used to separate sand from a sand and water mixture.",3,"Pour the mixture through filter paper in a funnel; the water passes through as filtrate while the sand is trapped as the residue."],
+      ["Describe how simple distillation can be used to obtain pure water from salt water.",3,"Heat the salt solution; the water boils and the vapour is cooled in a condenser; pure water is collected as the distillate while salt remains in the flask."],
+      ["Describe how fractional distillation separates ethanol from a mixture of ethanol and water.",4,"Heat the mixture in a flask with a fractionating column; ethanol vapour (lower boiling point) rises through the column while water condenses and returns; ethanol vapour passes into the condenser and is collected."],
+      ["Explain why paper chromatography can separate a mixture of dyes.",3,"Different dyes have different solubilities in the solvent and different attractions to the paper, so they travel different distances up the paper."]
+    ],
+    Numerical:[
+      ["In chromatography a solvent travels 8.0 cm and a spot travels 6.0 cm. Calculate the Rf value.",2,"Rf = 6.0/8.0 = 0.75."],
+      ["A spot has Rf = 0.40 and the solvent front travels 10.0 cm. Calculate how far the spot travels.",2,"Distance = 0.40 × 10.0 = 4.0 cm."],
+      ["A liquid mixture boils at 78 °C and 100 °C. State the temperature at which ethanol will be collected during fractional distillation.",1,"78 °C."]
+    ]
+  },
+  "22. Chemical analysis":{
+    Theory:[
+      ["Describe the test for hydrogen gas.",2,"Place a lighted splint at the mouth of the test tube; a squeaky 'pop' indicates hydrogen."],
+      ["Describe the test for oxygen gas.",2,"Place a glowing splint into the test tube; if the splint relights, oxygen is present."],
+      ["Describe the test for carbon dioxide.",2,"Bubble the gas through limewater; if it turns milky/cloudy, carbon dioxide is present."],
+      ["Describe the test for ammonia gas.",2,"Hold damp red litmus paper at the mouth of the test tube; ammonia turns it blue."]
+    ],
+    Numerical:[
+      ["A flame test gives a lilac colour. State the metal ion present.",1,"Potassium (K⁺)."],
+      ["A solution gives a white precipitate with silver nitrate (in nitric acid) that dissolves in dilute ammonia. State the halide ion present.",1,"Chloride (Cl⁻)."],
+      ["A sample produces 24 cm³ of gas. Calculate this volume in dm³.",1,"24/1000 = 0.024 dm³."]
+    ]
+  }
+};
 function chemistryVariants(chapter){
   const theory=[],numerical=[];
-  for(let i=1;i<=5;i++){
+  for(let i=1;i<=10;i++){
     const a=2+i,b=3+(i%6),c=1+(i%4);
-    const prompt=chemistryTheoryPrompts[chapter][i%chemistryTheoryPrompts[chapter].length];
-    theory.push([prompt,2,`Award marks for a correct syllabus-aligned response for ${chapter}.`]);
+    const prompts=chemistryTheoryPrompts[chapter]||[];
+    if(prompts.length){const prompt=prompts[i%prompts.length];theory.push([prompt,2,`Award marks for a correct syllabus-aligned response for ${chapter}.`]);}
     if(chapter==="1. States of matter")numerical.push([`A sample is heated from ${a*5} °C to ${a*5+b*10} °C. Calculate the temperature increase.`,1,`Temperature increase = ${a*5+b*10} − ${a*5} = ${b*10} °C.`]);
     else if(chapter==="2. Atomic structure")numerical.push([`An atom has proton number ${a} and nucleon number ${a+b}. Calculate the number of neutrons.`,1,`Neutrons = ${a+b} − ${a} = ${b}.`]);
     else if(chapter==="3. Chemical bonding")numerical.push([`A molecule contains ${a} atoms of hydrogen and ${b} atoms of oxygen. Calculate the total number of atoms in one molecule.`,1,`${a} + ${b} = ${a+b} atoms.`]);
@@ -442,10 +741,15 @@ function renderSubjects(){ $("subject-grid").innerHTML=Object.keys(curriculum).m
 function renderChapters(){const search=$("chapter-input").value.toLowerCase();$("chapter-options").innerHTML=curriculum[state.subject].filter(c=>c.toLowerCase().includes(search)).map(c=>`<button class="chapter-option ${state.chapters.includes(c)?"selected":""}" type="button" data-chapter="${c}">${c}</button>`).join("");document.querySelectorAll("[data-chapter]").forEach(b=>b.onclick=()=>{if(!state.chapters.includes(b.dataset.chapter))state.chapters.push(b.dataset.chapter);render();});$("selected-chapters").innerHTML=state.chapters.length?state.chapters.map(c=>`<span class="chapter-chip">${c}<button type="button" data-remove="${c}">×</button></span>`).join(""):`<span class="chapter-chip">Choose at least one chapter</span>`;document.querySelectorAll("[data-remove]").forEach(b=>b.onclick=()=>{state.chapters=state.chapters.filter(c=>c!==b.dataset.remove);render();});}
 function hasSplit(){return state.subject!=="Mathematics";}
 function getSplit(){return {theory:+$("theory-marks").value||0,numerical:+$("numerical-marks").value||0};}
-function updateSummary(){const marks=+$("marks").value||40,split=getSplit(),showSplit=hasSplit();$("sum-subject").textContent=state.subject;$("sum-chapters").textContent=`${state.chapters.length} selected`;$("sum-marks").textContent=`${marks} marks`;$("sum-questions").textContent=`~${Math.max(4,Math.ceil(marks/3))} questions`;$("split-settings").classList.toggle("hidden",!showSplit);$("sum-split-row").classList.toggle("hidden",!showSplit);$("sum-split").textContent=`${split.theory} theory · ${split.numerical} numerical`;$("split-error").textContent=showSplit&&split.theory+split.numerical!==marks?`Theory and numerical marks must add up to ${marks}.`:"";}
+function getDifficulty(){return ($("difficulty")&&$("difficulty").value)||"Balanced";}
+function getReferenceLink(){return ($("reference-link")&&$("reference-link").value.trim())||"";}
+function sanitizeReferenceLink(){const raw=getReferenceLink();if(!raw)return {ok:true,url:""};try{const u=new URL(raw);if(u.protocol!=="http:"&&u.protocol!=="https:")return {ok:false,error:"Please enter an http or https URL."};return {ok:true,url:u.toString()};}catch(e){return {ok:false,error:"Please enter a valid URL (e.g. https://example.com/paper.pdf)."};}}
+function difficultyRank(marks){const d=getDifficulty();if(d==="Foundation")return marks<=2?0:marks<=3?1:2;if(d==="Challenge")return marks>=4?0:marks>=3?1:2;return 0;}
+function orderByDifficulty(items){return [...items].sort((x,y)=>difficultyRank(x.q[1])-difficultyRank(y.q[1]));}
+function updateSummary(){const marks=+$("marks").value||40,split=getSplit(),showSplit=hasSplit(),duration=$("duration")?$("duration").value:"",difficulty=getDifficulty(),link=getReferenceLink();$("sum-subject").textContent=state.subject;$("sum-chapters").textContent=`${state.chapters.length} selected`;$("sum-marks").textContent=`${marks} marks`;$("sum-questions").textContent=`~${Math.max(4,Math.ceil(marks/3))} questions`;$("split-settings").classList.toggle("hidden",!showSplit);$("sum-split-row").classList.toggle("hidden",!showSplit);$("sum-split").textContent=`${split.theory} theory · ${split.numerical} numerical`;if($("sum-duration"))$("sum-duration").textContent=duration;if($("sum-difficulty"))$("sum-difficulty").textContent=difficulty;if($("sum-reference"))$("sum-reference").textContent=link?link:"Default PMT archive";$("split-error").textContent=showSplit&&split.theory+split.numerical!==marks?`Theory and numerical marks must add up to ${marks}.`:"";}
 function render(){renderSubjects();renderChapters();updateSummary();}
 function addCustom(){const val=$("chapter-input").value.trim();if(val&&!state.chapters.includes(val)){state.chapters.push(val);$("chapter-input").value="";render();}}
-function chapterQuestions(){const curated=banks[state.subject].map((q,i)=>({q,chapter:chapterMap[state.subject][i]})).filter(item=>state.chapters.includes(item.chapter));if(state.subject==="Mathematics"){const extra=state.chapters.flatMap(chapter=>[...(mathsSupplements[chapter]||[]),...mathsVariants(chapter)].map(q=>({q,chapter})));return [...curated,...extra];}if(state.subject==="Chemistry"){const extra=state.chapters.flatMap(chapter=>{const variants=chemistryVariants(chapter);return variants.Theory.map(q=>({q,chapter,forcedType:"Theory"})).concat(variants.Numerical.map(q=>({q,chapter,forcedType:"Numerical"})));});return [...curated,...extra];}const extra=state.chapters.flatMap(chapter=>{const bank=physicsSupplements[chapter]||{Theory:[],Numerical:[]},variants=physicsVariants(chapter);return [...bank.Theory,...variants.Theory].map(q=>({q,chapter,forcedType:"Theory"})).concat([...bank.Numerical,...variants.Numerical].map(q=>({q,chapter,forcedType:"Numerical"})));});return [...curated,...extra];}
+function chapterQuestions(){const curated=banks[state.subject].map((q,i)=>({q,chapter:chapterMap[state.subject][i]})).filter(item=>state.chapters.includes(item.chapter));if(state.subject==="Mathematics"){const extra=state.chapters.flatMap(chapter=>[...(mathsSupplements[chapter]||[]),...mathsVariants(chapter)].map(q=>({q,chapter})));return [...curated,...extra];}if(state.subject==="Chemistry"){const extra=state.chapters.flatMap(chapter=>{const bank=chemistrySupplements[chapter]||{Theory:[],Numerical:[]},variants=chemistryVariants(chapter);return [...bank.Theory,...variants.Theory].map(q=>({q,chapter,forcedType:"Theory"})).concat([...bank.Numerical,...variants.Numerical].map(q=>({q,chapter,forcedType:"Numerical"})));});return [...curated,...extra];}const extra=state.chapters.flatMap(chapter=>{const bank=physicsSupplements[chapter]||{Theory:[],Numerical:[]},variants=physicsVariants(chapter);return [...bank.Theory,...variants.Theory].map(q=>({q,chapter,forcedType:"Theory"})).concat([...bank.Numerical,...variants.Numerical].map(q=>({q,chapter,forcedType:"Numerical"})));});return [...curated,...extra];}
 function questionSources(){const source=chapterQuestions();if(state.subject==="Physics")return {Theory:source.filter(item=>item.forcedType==="Theory"||(!item.forcedType&&![1,3,5,10,11,12,13,16,17,20].includes(banks.Physics.indexOf(item.q)))),Numerical:source.filter(item=>item.forcedType==="Numerical"||(!item.forcedType&&[1,3,5,10,11,12,13,16,17,20].includes(banks.Physics.indexOf(item.q))))};if(state.subject==="Chemistry")return {Theory:source.filter(item=>item.forcedType==="Theory"||(!item.forcedType&&![2,11].includes(banks.Chemistry.indexOf(item.q)))),Numerical:source.filter(item=>item.forcedType==="Numerical"||(!item.forcedType&&[2,11].includes(banks.Chemistry.indexOf(item.q))))};return {Questions:source};}
 function sectionCapacity(source){return source.reduce((sum,item)=>sum+item.q[1],0);}
 function normalizeQuestionText(text){return (text||"").replace(/\s+/g," ").trim().toLowerCase();}
@@ -453,10 +757,10 @@ function normalizeQuestionTemplate(text){return normalizeQuestionText(text).repl
 function questionDedupeKey(item){if(state.subject==="Mathematics")return `${item.chapter||"general"}::${normalizeQuestionText(item.q[0])}`;return normalizeQuestionText(item.q[0]);}
 function questionKeyLimit(){return 1;}
 function uniqueSectionCapacity(source,usedCounts){const counts=usedCounts||new Map(),limit=questionKeyLimit();let total=0;for(const item of source){const key=questionDedupeKey(item),used=counts.get(key)||0;if(used>=limit)continue;counts.set(key,used+1);total+=item.q[1];}return total;}
-function fillSection(source,target,type,startIndex,usedCounts){if(!target||!source.length)return [];let result=[],total=0,ordered=[...source.slice(startIndex%source.length),...source.slice(0,startIndex%source.length)],counts=usedCounts||new Map(),limit=questionKeyLimit();for(const item of ordered){if(total>=target)break;let q=item.q,key=questionDedupeKey(item),used=counts.get(key)||0;if(used>=limit)continue;let questionMarks=Math.min(q[1],target-total);result.push({text:q[0],marks:questionMarks,answer:q[2],diagram:q[3]||"",type,chapter:item.chapter});counts.set(key,used+1);total+=questionMarks;}return result;}
+function fillSection(source,target,type,startIndex,usedCounts){if(!target||!source.length)return [];let result=[],total=0,prepared=orderByDifficulty(source),ordered=[...prepared.slice(startIndex%prepared.length),...prepared.slice(0,startIndex%prepared.length)],counts=usedCounts||new Map(),limit=questionKeyLimit();for(const item of ordered){if(total>=target)break;let q=item.q,key=questionDedupeKey(item),used=counts.get(key)||0;if(used>=limit)continue;let questionMarks=Math.min(q[1],target-total);result.push({text:q[0],marks:questionMarks,answer:q[2],diagram:q[3]||"",type,chapter:item.chapter});counts.set(key,used+1);total+=questionMarks;}return result;}
 function buildQuestions(){const sources=questionSources(),split=getSplit(),usedCounts=new Map();state.questions=hasSplit()?[...fillSection(sources.Theory,split.theory,"Theory",state.seed,usedCounts),...fillSection(sources.Numerical,split.numerical,"Numerical",state.seed,usedCounts)]:fillSection(sources.Questions,+$("marks").value,"Questions",state.seed,usedCounts);state.seed++;}
 function questionHtml(){let lastType="";return state.questions.map((q,i)=>{const heading=q.type!==lastType?`<h4 class="paper-section">${q.type}<span>${state.questions.filter(item=>item.type===q.type).reduce((sum,item)=>sum+item.marks,0)} marks</span></h4>`:"";lastType=q.type;return `${heading}<div class="question"><b>${i+1}.</b><div>${q.text}${q.diagram?`<div class="question-diagram">${q.diagram}</div>`:""}<div class="work-lines">${"<i></i>".repeat(Math.max(1,q.marks-1))}</div></div><span class="marks">[${q.marks}]</span></div>`;}).join("");}
-function renderPaper(){const title=$("paper-title").value||"Chapter Assessment",marks=+$("marks").value,duration=$("duration").value,chapters=state.chapters.join(" · ");$("preview-subtitle").textContent=`${state.subject} · ${marks} marks`;$("paper-output").innerHTML=`<header class="paper-head"><h2>${title}</h2><p>Cambridge IGCSE ${state.subject} · ${subjectMeta[state.subject]}</p><p>${chapters}</p></header><div class="paper-meta"><span>Name: __________________________</span><span>Time: ${duration}</span><span>Total: ${marks} marks</span></div><div class="instructions"><b>Instructions:</b> Answer all questions. Show your working clearly where appropriate. Write your answers in the spaces provided.</div>${questionHtml()}`;$("answer-output").innerHTML=`<h2>${title} · Answer key</h2><p>${state.subject} · ${marks} marks</p>${state.questions.map((q,i)=>`<div class="answer-item"><b>${i+1}. ${q.type} [${q.marks}]</b> ${q.answer}</div>`).join("")}`;}
-async function refreshReference(){const status=$("reference-status");status.className="reference-status checking";status.textContent="Refreshing the PMT past-paper reference archive...";try{const response=await fetch("/.netlify/functions/reference-refresh",{cache:"no-store"});if(!response.ok)throw new Error("Reference refresh failed");const data=await response.json();status.className="reference-status";status.textContent=`Reference archive checked ${new Date(data.checkedAt).toLocaleString()}. Preparing an original chapter-matched paper.`;return true;}catch(error){status.className="reference-status error";status.textContent="Reference archive refresh failed. Run the local server or try again before generating.";return false;}}
-async function openPreview(){const marks=+$("marks").value,split=getSplit(),sources=questionSources();if(!state.chapters.length){alert("Please choose at least one chapter.");return;}if(hasSplit()&&split.theory+split.numerical!==marks){alert(`Theory and numerical marks must add up to ${marks}.`);return;}if(hasSplit()&&((split.theory&&!sources.Theory.length)||(split.numerical&&!sources.Numerical.length))){alert("The selected chapters do not yet have enough theory and numerical templates for this split. Please adjust the split or choose another chapter.");return;}if(hasSplit()){const usedCounts=new Map(),availableTheory=uniqueSectionCapacity(sources.Theory,usedCounts),availableNumerical=uniqueSectionCapacity(sources.Numerical,usedCounts);if(split.theory>availableTheory||split.numerical>availableNumerical){alert(`There are not enough unique questions for this paper yet. Available for the selected chapters: ${availableTheory} theory marks and ${availableNumerical} numerical marks. Please reduce the marks or choose more chapters.`);return;}}if(!hasSplit()&&!sources.Questions.length){alert("The selected chapters do not yet have question templates. Please choose another chapter.");return;}if(!hasSplit()){const available=uniqueSectionCapacity(sources.Questions,new Map());if(marks>available){alert(`There are not enough unique questions for this paper yet. Available for the selected chapters: ${available} marks. Please reduce the marks or choose more chapters.`);return;}}if(!await refreshReference())return;buildQuestions();renderPaper();$("preview").classList.add("open");$("preview").setAttribute("aria-hidden","false");}
-$("paper-form").onsubmit=async e=>{e.preventDefault();await openPreview();};$("chapter-input").oninput=renderChapters;$("chapter-input").onkeydown=e=>{if(e.key==="Enter"){e.preventDefault();addCustom();}};$("add-custom").onclick=addCustom;$("marks").oninput=updateSummary;$("theory-marks").oninput=updateSummary;$("numerical-marks").oninput=updateSummary;$("close-preview").onclick=()=>$("preview").classList.remove("open");$("print-paper").onclick=()=>window.print();$("regenerate").onclick=async()=>{if(await refreshReference()){buildQuestions();renderPaper();}};$("answer-toggle").onclick=()=>{const p=$("answer-output");p.classList.toggle("hidden");$("answer-toggle").textContent=p.classList.contains("hidden")?"Show answer key":"Hide answer key";};render();
+function renderPaper(){const title=$("paper-title").value||"Chapter Assessment",marks=+$("marks").value,duration=$("duration").value,difficulty=getDifficulty(),link=getReferenceLink(),chapters=state.chapters.join(" · ");$("preview-subtitle").textContent=`${state.subject} · ${marks} marks · ${difficulty}`;$("paper-output").innerHTML=`<header class="paper-head"><h2>${title}</h2><p>Cambridge IGCSE ${state.subject} · ${subjectMeta[state.subject]}</p><p>${chapters}</p></header><div class="paper-meta"><span>Name: __________________________</span><span>Time: ${duration}</span><span>Total: ${marks} marks</span><span>Level: ${difficulty}</span></div><div class="instructions"><b>Instructions:</b> Answer all questions. Show your working clearly where appropriate. Write your answers in the spaces provided.${link?` <br /><small>Reference: ${link}</small>`:""}</div>${questionHtml()}`;$("answer-output").innerHTML=`<h2>${title} · Answer key</h2><p>${state.subject} · ${marks} marks · ${difficulty}</p>${state.questions.map((q,i)=>`<div class="answer-item"><b>${i+1}. ${q.type} [${q.marks}]</b> ${q.answer}</div>`).join("")}`;}
+async function refreshReference(){const status=$("reference-status"),link=getReferenceLink();status.className="reference-status checking";status.textContent=link?`Checking the reference link you provided...`:"Refreshing the PMT past-paper reference archive...";try{const url=link?`/.netlify/functions/reference-refresh?url=${encodeURIComponent(link)}`:"/.netlify/functions/reference-refresh";const response=await fetch(url,{cache:"no-store"});if(!response.ok)throw new Error("Reference refresh failed");const data=await response.json();status.className="reference-status";status.textContent=`Reference checked ${new Date(data.checkedAt).toLocaleString()} (${data.source||"PMT archive"}). Preparing an original chapter-matched paper.`;return true;}catch(error){status.className="reference-status error";status.textContent="Reference check failed. Confirm the link is reachable or run the local server before generating.";return false;}}
+async function openPreview(){const marks=+$("marks").value,split=getSplit(),sources=questionSources(),linkCheck=sanitizeReferenceLink();if(!linkCheck.ok){alert(linkCheck.error);return;}if(!state.chapters.length){alert("Please choose at least one chapter.");return;}if(hasSplit()&&split.theory+split.numerical!==marks){alert(`Theory and numerical marks must add up to ${marks}.`);return;}if(hasSplit()&&((split.theory&&!sources.Theory.length)||(split.numerical&&!sources.Numerical.length))){alert("The selected chapters do not yet have enough theory and numerical templates for this split. Please adjust the split or choose another chapter.");return;}if(hasSplit()){const usedCounts=new Map(),availableTheory=uniqueSectionCapacity(sources.Theory,usedCounts),availableNumerical=uniqueSectionCapacity(sources.Numerical,usedCounts);if(split.theory>availableTheory||split.numerical>availableNumerical){alert(`There are not enough unique questions for this paper yet. Available for the selected chapters: ${availableTheory} theory marks and ${availableNumerical} numerical marks. Please reduce the marks or choose more chapters.`);return;}}if(!hasSplit()&&!sources.Questions.length){alert("The selected chapters do not yet have question templates. Please choose another chapter.");return;}if(!hasSplit()){const available=uniqueSectionCapacity(sources.Questions,new Map());if(marks>available){alert(`There are not enough unique questions for this paper yet. Available for the selected chapters: ${available} marks. Please reduce the marks or choose more chapters.`);return;}}if(!await refreshReference())return;buildQuestions();renderPaper();$("preview").classList.add("open");$("preview").setAttribute("aria-hidden","false");}
+$("paper-form").onsubmit=async e=>{e.preventDefault();await openPreview();};$("chapter-input").oninput=renderChapters;$("chapter-input").onkeydown=e=>{if(e.key==="Enter"){e.preventDefault();addCustom();}};$("add-custom").onclick=addCustom;$("marks").oninput=updateSummary;$("theory-marks").oninput=updateSummary;$("numerical-marks").oninput=updateSummary;if($("duration"))$("duration").onchange=updateSummary;if($("difficulty"))$("difficulty").onchange=updateSummary;if($("reference-link"))$("reference-link").oninput=updateSummary;$("close-preview").onclick=()=>$("preview").classList.remove("open");$("print-paper").onclick=()=>window.print();$("regenerate").onclick=async()=>{if(await refreshReference()){buildQuestions();renderPaper();}};$("answer-toggle").onclick=()=>{const p=$("answer-output");p.classList.toggle("hidden");$("answer-toggle").textContent=p.classList.contains("hidden")?"Show answer key":"Hide answer key";};render();
