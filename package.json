@@ -1,9 +1,20 @@
 {
   "name": "igcse-exam-paper-generator",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
-  "description": "Static site + Netlify functions for the Paperwise IGCSE paper builder.",
+  "description": "Express app that builds IGCSE (Physics 0625, Chemistry 0620, Mathematics 0580) papers live from past-paper PDFs, by chapter, marks, theory/sums split and difficulty.",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
   "dependencies": {
+    "express": "^4.19.2",
+    "multer": "^2.2.0",
     "pdf-parse": "1.1.1"
   }
 }

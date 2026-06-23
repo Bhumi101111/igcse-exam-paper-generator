@@ -1,19 +1,57 @@
-# Paperwise
+# IGCSE Paper Generator
 
-Static Paperwise UI with a small backend reference check.
+An Express app that builds **Cambridge IGCSE** exam papers **live from past-paper PDFs** for:
 
-## Local preview
+- **Physics 0625**
+- **Chemistry 0620**
+- **Mathematics 0580**
 
-Run:
+## What it does
 
-```powershell
-& "C:\Users\bhumim\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.exe" server.js
+- Pick a **subject** and any **combination of chapters**.
+- Set a **total mark** count.
+- For **Physics & Chemistry**, split the marks into **Theory** and **Sums** (numerical).
+  Some chapters have no sums — those simply contribute theory, and the Sums section
+  draws numerical questions from whichever selected chapters provide them.
+- Choose a **difficulty**: **Easy / Medium / Hard**.
+- The server reads the supplied past-paper **PDFs**, extracts question parts with their
+  marks, matches them to the selected chapters, classifies theory vs sums and difficulty,
+  removes duplicates, and assembles a paper to the requested marks.
+
+### No duplicates
+Two questions with the **same wording that differ only in their numbers** are treated as
+duplicates — every number is normalised to a placeholder before comparison, so only one
+copy can appear in a paper.
+
+## Source PDFs
+
+The reference base is <https://pastpapers.co/caie/igcse>. That site is **Cloudflare-protected**,
+so a server cannot crawl it directly. The reliable ways to provide source material are:
+
+1. **Upload** question-paper PDFs (download them from pastpapers.co), or
+2. **Paste direct PDF links** (one per line) to any reachable PDF, or
+3. (Optional) provide an **index URL** to crawl for `_qp_` PDF links — works only if that
+   page isn't behind a bot challenge.
+
+Mark schemes (`_ms`), examiner reports (`_er`) and grade thresholds (`_gt`) are ignored.
+
+## Run
+
+```bash
+npm install
+npm start
+# open http://localhost:4173
 ```
 
-Then open `http://localhost:4173`.
+## Project structure
 
-Before each paper is generated, the UI calls the backend. The backend refreshes the PMT past-paper archive status and returns exam-style guidance. Generated questions remain original and chapter-matched.
-
-## Netlify
-
-The included `netlify.toml` deploys the static UI and `netlify/functions/reference-refresh.js`.
+```
+server.js            Express server + /api routes
+src/chapters.js      Subjects, chapters, keyword maps, sums hints
+src/sources.js       Fetch PDF/HTML, harvest PDF links (Cloudflare-aware)
+src/extract.js       PDF text -> question parts with marks
+src/classify.js      Chapter / Theory-vs-Sums / difficulty classification
+src/dedupe.js        Remove number-only duplicate questions
+src/generate.js      Assemble paper to total marks + split + difficulty
+public/              Frontend (form + preview, print to PDF)
+```
