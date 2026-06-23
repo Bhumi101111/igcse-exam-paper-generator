@@ -43,6 +43,16 @@ npm start
 # open http://localhost:4173
 ```
 
+## Deploy (Netlify)
+
+The frontend is served from `public/` and the Express API runs as a Netlify
+Function (`netlify/functions/api.js`) via `serverless-http`; `netlify.toml`
+routes `/api/*` and `/health` to it. Connect the repo in Netlify and deploy —
+no build settings needed beyond what's in `netlify.toml`.
+
+> Note: Netlify Functions cap request payloads at ~6 MB and free execution at
+> ~10 s, so very large PDF uploads may need to be split.
+
 ## Project structure
 
 ```

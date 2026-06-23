@@ -163,6 +163,12 @@ app.post("/api/generate", upload.array("pdfs", MAX_PDFS), async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`IGCSE paper generator running at http://localhost:${PORT}`);
-});
+// Run a standalone server only when executed directly (e.g. `npm start`).
+// When imported (Netlify Function), just export the app.
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`IGCSE paper generator running at http://localhost:${PORT}`);
+  });
+}
+
+module.exports = app;

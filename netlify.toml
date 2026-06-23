@@ -1,0 +1,21 @@
+# Netlify config — static frontend from public/, Express API as a function.
+[build]
+  command = "npm install"
+  publish = "public"
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+  # Keep pdf-parse unbundled so its internal PDF engine loads correctly.
+  external_node_modules = ["pdf-parse"]
+
+# Route dynamic paths to the Express-backed function; static files serve from public/.
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api"
+  status = 200
+
+[[redirects]]
+  from = "/health"
+  to = "/.netlify/functions/api"
+  status = 200
