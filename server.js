@@ -20,10 +20,14 @@ const app = express();
 app.use(express.json({ limit: "1mb" }));
 app.use(express.static(path.join(__dirname, "public")));
 
+app.get("/health", (_req, res) => res.json({ ok: true }));
+
 const upload = multer({
   storage: multer.memoryStorage(),
   limits: { fileSize: 12 * 1024 * 1024, files: MAX_PDFS }
 });
+
+app.get("/health", (_req, res) => res.json({ ok: true }));
 
 app.get("/api/subjects", (_req, res) => {
   const subjects = Object.entries(SUBJECTS).map(([name, meta]) => ({
