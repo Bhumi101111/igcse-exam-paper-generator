@@ -171,9 +171,7 @@ function renderPaper(paper) {
     for (const q of section.questions) {
       html += `<div class="q">
         <div class="qn">${q.n}.</div>
-        <div class="qbody">${escapeHtml(q.text)}
-          <div class="qmeta">${escapeHtml(q.chapter)} · ${q.difficulty}</div>
-        </div>
+        <div class="qbody">${escapeHtml(q.text)}</div>
         <div class="qmarks">[${q.marks}]</div>
       </div>`;
     }
