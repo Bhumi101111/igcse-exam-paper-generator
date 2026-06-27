@@ -52,9 +52,12 @@ function orderItems(items, preferredDifficulty) {
 function fillSection(items, target, used, preferredDifficulty) {
   if (target <= 0) return { questions: [], marks: 0 };
   const ordered = orderItems(items.filter(it => !used.has(it._key)), preferredDifficulty);
+  // Reserve low-mark questions (1-mark) as end-fillers so the target is hit
+  // exactly instead of leaving a small remainder.
+  const sequence = [...ordered.filter(it => it.marks >= 2), ...ordered.filter(it => it.marks < 2)];
   const questions = [];
   let marks = 0;
-  for (const it of ordered) {
+  for (const it of sequence) {
     if (marks >= target) break;
     if (used.has(it._key)) continue;
     if (it.marks > target - marks) continue; // keep within target

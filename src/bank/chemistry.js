@@ -56,7 +56,12 @@ module.exports = {
     ["A molecule of ethanol is C₂H₅OH. Calculate the total number of atoms in one molecule.", 2, "E", "S"],
     ["Calculate the relative formula mass of CO₂. [Ar: C = 12, O = 16]", 1, "E", "S"],
     ["In the equation 2H₂ + O₂ → 2H₂O, state the ratio of moles of hydrogen to moles of water.", 1, "M", "S"],
-    ["Balance the equation: __ Na + __ O₂ → __ Na₂O.", 2, "H", "S"]
+    ["Balance the equation: __ Na + __ O₂ → __ Na₂O.", 2, "H", "S"],
+    ["Construct the word equation for the reaction of zinc with dilute sulfuric acid.", 2, "M", "T"],
+    ["Calculate the relative formula mass of NaCl. [Ar: Na = 23, Cl = 35.5]", 1, "E", "S"],
+    ["Calculate the relative formula mass of (NH₄)₂SO₄. [Ar: N = 14, H = 1, S = 32, O = 16]", 3, "H", "S"],
+    ["Calculate the percentage by mass of nitrogen in NH₃. [Ar: N = 14, H = 1]", 3, "H", "S"],
+    ["Balance the equation: __ H₂ + __ N₂ → __ NH₃.", 2, "M", "S"]
   ],
   "5. Chemical calculations": [
     ["Define the term mole.", 2, "M", "T"],
@@ -70,7 +75,14 @@ module.exports = {
     ["Calculate the volume occupied by 0.50 mol of a gas at r.t.p.", 2, "M", "S"],
     ["Calculate the number of moles in 9.0 g of water. [Mr = 18]", 2, "M", "S"],
     ["Calculate the percentage by mass of oxygen in water, H₂O. [Ar: H = 1, O = 16]", 3, "H", "S"],
-    ["25.0 cm³ of 0.10 mol/dm³ HCl is used in a titration. Calculate the number of moles of HCl.", 3, "H", "S"]
+    ["25.0 cm³ of 0.10 mol/dm³ HCl is used in a titration. Calculate the number of moles of HCl.", 3, "H", "S"],
+    ["State Avogadro's constant and what it represents.", 2, "M", "T"],
+    ["Calculate the number of moles in 40 g of sodium hydroxide. [Mr NaOH = 40]", 2, "M", "S"],
+    ["Calculate the mass of 2.0 mol of water. [Mr = 18]", 2, "M", "S"],
+    ["Calculate the number of molecules in 0.50 mol of a gas. (Avogadro constant = 6.0 × 10²³)", 3, "H", "S"],
+    ["Calculate the volume of carbon dioxide at r.t.p. produced from 0.20 mol of CaCO₃. [1 mol of gas = 24 dm³]", 3, "H", "S"],
+    ["Calculate the concentration in g/dm³ of a solution containing 8.0 g of solute in 500 cm³.", 3, "H", "S"],
+    ["Calculate the percentage yield when 4.0 g of product is obtained from a theoretical maximum of 5.0 g.", 2, "M", "S"]
   ],
   "11. Acids and bases": [
     ["Define an acid in terms of hydrogen ions.", 2, "M", "T"],
