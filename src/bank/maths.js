@@ -115,13 +115,19 @@ module.exports = {
     ["The points A(2, 5) and B(8, 17) lie on a straight line. Find its gradient.", 2, "M", "Q"],
     ["Find the equation of the line with gradient 3 and y-intercept −4.", 2, "M", "Q"],
     ["Solve x² + 5x + 6 = 0.", 2, "M", "Q"],
-    ["The line y = 2x + 1 passes through the point (4, y). Find y.", 1, "E", "Q"],
-    ["Find the gradient of the line joining (−1, 3) and (5, 15).", 2, "M", "Q"],
     ["Write down the gradient and y-intercept of y = 5x − 2.", 1, "E", "Q"],
-    ["Solve x² − 7x + 10 = 0.", 2, "H", "Q"],
     ["Find y when x = 3 for the line y = 4x − 5.", 1, "E", "Q"],
     ["Find the equation of the line through (0, 2) with gradient −1.", 2, "M", "Q"],
-    ["Solve x² + 2x − 8 = 0.", 3, "H", "Q"]
+    ["Find the coordinates of the point where the line y = 3x − 6 crosses the x-axis.", 2, "M", "Q"],
+    ["Find the coordinates of the point where the line y = 2x + 8 crosses the y-axis.", 1, "E", "Q"],
+    ["Rearrange 2y = 4x + 10 into the form y = mx + c and state the gradient.", 2, "M", "Q"],
+    ["Find the equation of the line parallel to y = 2x + 3 that passes through (0, −5).", 2, "M", "Q"],
+    ["Find the midpoint of the line segment joining (2, 4) and (6, 10).", 2, "M", "Q"],
+    ["Find the equation of the straight line that passes through (1, 2) and (3, 8).", 3, "H", "Q"],
+    ["Factorise x² − 16.", 2, "M", "Q"],
+    ["Find the length of the line segment joining (0, 0) and (3, 4).", 3, "H", "Q"],
+    ["Find the gradient of a line perpendicular to y = 2x + 1.", 2, "H", "Q"],
+    ["State the coordinates of the turning point's line of symmetry for y = x² − 4x + 3 by finding where it crosses the x-axis.", 3, "H", "Q"]
   ],
   "11. Pythagoras' theorem and similar shapes": [
     ["A right-angled triangle has hypotenuse 13 cm and one shorter side 5 cm. Find the third side.", 3, "M", "Q"],

@@ -105,7 +105,7 @@ function generate(pool, options) {
   const notes = [];
   for (const s of sections) {
     if (s.target > 0 && s.marks < s.target) {
-      notes.push(`${s.type}: built ${s.marks} of ${s.target} marks — not enough unique ${s.type.toLowerCase()} questions available for the selected chapters. Add more chapters or upload past-paper PDFs to extend the pool.`);
+      notes.push(`${s.type} section: only ${s.marks} of ${s.target} marks could be filled with unique, non-duplicate questions for the selected chapter(s). Select more chapters, lower the marks, or upload a past-paper PDF to extend the pool.`);
     }
   }
 
