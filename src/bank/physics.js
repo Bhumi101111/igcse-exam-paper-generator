@@ -186,7 +186,10 @@ module.exports = {
     ["An echo returns 0.50 s after a shout. The speed of sound is 340 m/s. Calculate the distance to the wall.", 3, "M", "S"],
     ["A sound wave has a frequency of 400 Hz and a wavelength of 0.85 m. Calculate its speed.", 2, "M", "S"],
     ["Ultrasound takes 0.04 s to travel to the sea bed and back. The speed of sound in water is 1500 m/s. Calculate the depth.", 3, "H", "S"],
-    ["A sound wave travels at 340 m/s with a frequency of 170 Hz. Calculate its wavelength.", 2, "M", "S"]
+    ["A sound wave travels at 340 m/s with a frequency of 170 Hz. Calculate its wavelength.", 2, "M", "S"],
+    ["Describe how ultrasound is used to produce an image of an unborn baby.", 3, "H", "T"],
+    ["A bat emits a sound that returns after 0.10 s. The speed of sound is 340 m/s. Calculate the distance to the object.", 3, "H", "S"],
+    ["State why a loud sound can damage hearing.", 1, "E", "T"]
   ],
   "13. Light": [
     ["State the law of reflection.", 2, "E", "T"],
@@ -215,7 +218,11 @@ module.exports = {
     ["A wave travels at 340 m/s and has a frequency of 170 Hz. Calculate its wavelength.", 2, "M", "S"],
     ["A wave has a period of 0.025 s. Calculate its frequency.", 2, "M", "S"],
     ["A water wave of wavelength 0.50 m has a speed of 2.0 m/s. Calculate its frequency.", 2, "M", "S"],
-    ["A wave of speed 6.0 m/s has a frequency of 15 Hz. Calculate its wavelength.", 2, "M", "S"]
+    ["A wave of speed 6.0 m/s has a frequency of 15 Hz. Calculate its wavelength.", 2, "M", "S"],
+    ["State two properties that all waves can show.", 2, "M", "T"],
+    ["Describe what happens to a wave when it is reflected from a barrier.", 2, "M", "T"],
+    ["A wave completes 30 oscillations in 6.0 s. Calculate its frequency.", 2, "M", "S"],
+    ["The distance across five successive crests of a wave is 2.0 m. Calculate the wavelength.", 3, "H", "S"]
   ],
   "15. The electromagnetic spectrum": [
     ["List the regions of the electromagnetic spectrum in order of increasing frequency.", 3, "M", "T"],

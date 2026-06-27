@@ -193,7 +193,10 @@ module.exports = {
     ["State the products of the complete combustion of a hydrocarbon.", 2, "E", "T"],
     ["Calculate the mass of carbon dioxide produced when 4.6 g of ethanol (Mr = 46) is completely combusted. [Mr CO₂ = 44]", 4, "H", "S"],
     ["State the volume at r.t.p. of 0.50 mol of carbon dioxide.", 2, "M", "S"],
-    ["A fermentation produces 0.20 mol of ethanol. Calculate the mass of ethanol formed. [Mr = 46]", 2, "M", "S"]
+    ["A fermentation produces 0.20 mol of ethanol. Calculate the mass of ethanol formed. [Mr = 46]", 2, "M", "S"],
+    ["State what is meant by an addition reaction.", 2, "M", "T"],
+    ["Name the catalyst used in the manufacture of ethanol by the hydration of ethene.", 1, "M", "T"],
+    ["State the two products formed when ethanol is oxidised by warming with acidified potassium dichromate.", 2, "H", "T"]
   ],
   "20. Petrochemicals and polymers": [
     ["Define addition polymerisation.", 2, "M", "T"],

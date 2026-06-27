@@ -65,7 +65,11 @@ module.exports = {
     ["A category in a pie chart has angle 72° out of 360°. Calculate the fraction of the total it represents.", 2, "H", "Q"],
     ["Give one example of discrete data and one example of continuous data.", 2, "M", "Q"],
     ["A tally shows 12 marks for one category. State the frequency.", 1, "E", "Q"],
-    ["Explain why a frequency table is useful for organising a large set of data.", 2, "H", "Q"]
+    ["Explain why a frequency table is useful for organising a large set of data.", 2, "H", "Q"],
+    ["The mean of 4, 6, 8 and x is 7. Find x.", 3, "H", "Q"],
+    ["A pictogram uses one symbol to represent 5 items. State how many symbols represent 35 items.", 2, "M", "Q"],
+    ["State whether shoe size is discrete or continuous data.", 1, "E", "Q"],
+    ["A pie chart represents 200 people. One sector has angle 90°. Calculate the number of people it represents.", 3, "H", "Q"]
   ],
   "5. Fractions, percentages and standard form": [
     ["Calculate 3/4 + 5/8, giving your answer in its simplest form.", 2, "M", "Q"],
@@ -97,7 +101,12 @@ module.exports = {
     ["Solve x/3 = 6.", 1, "E", "Q"],
     ["Make h the subject of A = b × h.", 2, "M", "Q"],
     ["Factorise 8a + 12b.", 2, "M", "Q"],
-    ["Solve 2x + 3 = 4x − 5.", 2, "H", "Q"]
+    ["Solve 2x + 3 = 4x − 5.", 2, "H", "Q"],
+    ["Make t the subject of the formula v = u + at.", 2, "M", "Q"],
+    ["Make b the subject of the formula A = (1/2)bh.", 2, "H", "Q"],
+    ["Expand and simplify (x + 2)(x + 5).", 2, "H", "Q"],
+    ["Factorise the difference of two squares x² − 25.", 2, "M", "Q"],
+    ["Solve the equation (x − 3)(x + 4) = 0.", 2, "M", "Q"]
   ],
   "7. Perimeter, area and volume": [
     ["Calculate the area of a circle of radius 7 cm, giving your answer in terms of π.", 2, "M", "Q"],
@@ -161,7 +170,16 @@ module.exports = {
     ["Factorise x² − 16.", 2, "M", "Q"],
     ["Find the length of the line segment joining (0, 0) and (3, 4).", 3, "H", "Q"],
     ["Find the gradient of a line perpendicular to y = 2x + 1.", 2, "H", "Q"],
-    ["Find where the line y = x² − 4x + 3 crosses the x-axis.", 3, "H", "Q"]
+    ["Find where the curve y = x² − 4x + 3 crosses the x-axis.", 3, "H", "Q"],
+    ["Factorise x² + 7x + 12.", 2, "M", "Q"],
+    ["Use the quadratic formula to solve x² + 3x + 1 = 0, giving answers to 2 decimal places.", 3, "H", "Q"],
+    ["Determine whether the point (3, 7) lies on the line y = 2x + 1.", 2, "M", "Q"],
+    ["The line y = 3x + c passes through (2, 9). Find the value of c.", 2, "M", "Q"],
+    ["Write down the equation of the horizontal line passing through (0, 4).", 1, "E", "Q"],
+    ["Write down the equation of the vertical line passing through (5, 0).", 1, "E", "Q"],
+    ["Write down the y-intercept of the curve y = x² − 4x + 3.", 1, "E", "Q"],
+    ["Find the equation of the line perpendicular to y = 2x that passes through (0, 1).", 3, "H", "Q"],
+    ["Solve the equation x² = 49.", 1, "E", "Q"]
   ],
   "11. Pythagoras' theorem and similar shapes": [
     ["A right-angled triangle has hypotenuse 13 cm and one shorter side 5 cm. Find the third side.", 3, "M", "Q"],
@@ -189,7 +207,11 @@ module.exports = {
     ["Find the median of 12, 5, 9, 20, 14, 8.", 2, "H", "Q"],
     ["Four numbers have a mean of 15. Three of them are 12, 18 and 14. Find the fourth.", 3, "H", "Q"],
     ["State the difference between the mean and the median of a data set.", 2, "M", "Q"],
-    ["Find the mode of 5, 5, 6, 7, 7, 7, 9.", 1, "E", "Q"]
+    ["Find the mode of 5, 5, 6, 7, 7, 7, 9.", 1, "E", "Q"],
+    ["Find the mean of the first five positive even numbers.", 2, "M", "Q"],
+    ["The mean of six numbers is 10. When a seventh number is added the mean becomes 11. Find the seventh number.", 3, "H", "Q"],
+    ["Find the lower quartile of 3, 5, 7, 9, 11, 13, 15, 17.", 3, "H", "Q"],
+    ["State which average is most affected by an extreme value.", 1, "E", "Q"]
   ],
   "14. Further solving of equations and inequalities": [
     ["Solve the inequality 3x + 5 < 20.", 2, "M", "Q"],
@@ -217,6 +239,9 @@ module.exports = {
     ["Describe the strength and type of correlation when points lie exactly on a downward line.", 2, "H", "Q"],
     ["Explain why a line of best fit should follow the trend of the points rather than join them.", 2, "H", "Q"],
     ["State what is meant by an outlier on a scatter diagram.", 2, "M", "Q"],
-    ["Describe the correlation between the number of hours of sunshine and ice cream sales.", 2, "M", "Q"]
+    ["Describe the correlation between the number of hours of sunshine and ice cream sales.", 2, "M", "Q"],
+    ["Give one example of two variables likely to show negative correlation.", 2, "M", "Q"],
+    ["Explain what is meant by zero correlation.", 2, "M", "Q"],
+    ["State why extrapolating beyond the data using a line of best fit can be unreliable.", 2, "H", "Q"]
   ]
 };
