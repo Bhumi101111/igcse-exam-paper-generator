@@ -10,7 +10,11 @@ module.exports = {
     ["Explain why increasing the temperature increases the rate of diffusion of a gas.", 3, "H", "T"],
     ["Define the term diffusion.", 1, "E", "T"],
     ["Describe how the particle model explains the compression of a gas.", 2, "M", "T"],
-    ["Explain why a smell spreads across a room over time.", 2, "M", "T"]
+    ["Explain why a smell spreads across a room over time.", 2, "M", "T"],
+    ["Name the change of state when a gas turns directly into a solid.", 1, "E", "T"],
+    ["Explain why gases can be compressed much more easily than liquids.", 2, "H", "T"],
+    ["Describe what happens to the particles during condensation.", 2, "M", "T"],
+    ["State the term for the change of state from liquid to gas at the boiling point.", 1, "E", "T"]
   ],
   "2. Atomic structure": [
     ["State the relative charge and relative mass of a proton, a neutron and an electron.", 3, "M", "T"],
@@ -19,10 +23,12 @@ module.exports = {
     ["Describe the structure of an atom in terms of the nucleus and electron shells.", 3, "E", "T"],
     ["State the electronic configuration of a chlorine atom (proton number 17).", 2, "M", "T"],
     ["Explain why an atom has no overall electric charge.", 2, "M", "T"],
+    ["State what is meant by the proton number of an atom.", 1, "E", "T"],
     ["An atom has proton number 19 and nucleon number 39. Calculate the number of neutrons.", 2, "E", "S"],
     ["A magnesium ion is Mg²⁺. Magnesium has proton number 12. Calculate the number of electrons in the ion.", 2, "M", "S"],
     ["An atom has 17 protons and 20 neutrons. State its nucleon number.", 1, "E", "S"],
-    ["A sample of chlorine contains 75% ³⁵Cl and 25% ³⁷Cl. Calculate the relative atomic mass.", 3, "H", "S"]
+    ["A sample of chlorine contains 75% ³⁵Cl and 25% ³⁷Cl. Calculate the relative atomic mass.", 3, "H", "S"],
+    ["An oxide ion is O²⁻. Oxygen has proton number 8. Calculate the number of electrons in the ion.", 2, "M", "S"]
   ],
   "3. Chemical bonding": [
     ["Describe how an ionic bond is formed between a metal and a non-metal.", 3, "M", "T"],
@@ -32,32 +38,39 @@ module.exports = {
     ["Describe metallic bonding in a metal.", 3, "M", "T"],
     ["Explain why ionic compounds have high melting points.", 2, "M", "T"],
     ["State the type of bonding present in sodium chloride.", 1, "E", "T"],
-    ["Explain why simple molecular substances have low melting points.", 2, "M", "T"]
+    ["Explain why simple molecular substances have low melting points.", 2, "M", "T"],
+    ["Describe the structure and bonding in diamond.", 2, "M", "T"],
+    ["Explain why metals are malleable in terms of their structure.", 2, "H", "T"],
+    ["State the name given to a charged atom or group of atoms.", 1, "E", "T"],
+    ["Explain why silicon(IV) oxide has a very high melting point.", 2, "H", "T"]
   ],
   "4. Chemical formulae and equations": [
     ["Explain why a chemical equation must be balanced.", 2, "M", "T"],
     ["State the meaning of the state symbols (s), (l), (g) and (aq).", 2, "E", "T"],
     ["Write a word equation for the reaction between hydrochloric acid and sodium hydroxide.", 2, "E", "T"],
     ["Write a balanced symbol equation for the complete combustion of methane.", 2, "H", "T"],
+    ["Describe what is meant by a balanced symbol equation.", 2, "M", "T"],
     ["Calculate the relative formula mass of CaCO₃. [Ar: Ca = 40, C = 12, O = 16]", 2, "E", "S"],
     ["Calculate the relative formula mass of H₂SO₄. [Ar: H = 1, S = 32, O = 16]", 2, "M", "S"],
     ["Calculate the relative formula mass of Mg(NO₃)₂. [Ar: Mg = 24, N = 14, O = 16]", 3, "H", "S"],
     ["A molecule of ethanol is C₂H₅OH. Calculate the total number of atoms in one molecule.", 2, "E", "S"],
     ["Calculate the relative formula mass of CO₂. [Ar: C = 12, O = 16]", 1, "E", "S"],
-    ["In the equation 2H₂ + O₂ → 2H₂O, state the ratio of moles of hydrogen to moles of water.", 1, "M", "S"]
+    ["In the equation 2H₂ + O₂ → 2H₂O, state the ratio of moles of hydrogen to moles of water.", 1, "M", "S"],
+    ["Balance the equation: __ Na + __ O₂ → __ Na₂O.", 2, "H", "S"]
   ],
   "5. Chemical calculations": [
     ["Define the term mole.", 2, "M", "T"],
     ["State the equation linking concentration, amount in moles and volume in dm³.", 2, "M", "T"],
     ["Describe how to convert a volume measured in cm³ into dm³.", 1, "E", "T"],
     ["State the volume occupied by one mole of any gas at room temperature and pressure.", 1, "E", "T"],
+    ["State what is meant by the empirical formula of a compound.", 2, "M", "T"],
     ["Calculate the number of moles in 24 g of magnesium. [Ar: Mg = 24]", 2, "E", "S"],
     ["Calculate the mass of 0.25 mol of CaCO₃. [Mr = 100]", 2, "E", "S"],
     ["Calculate the concentration in mol/dm³ when 0.10 mol of NaOH is dissolved in 250 cm³ of solution.", 3, "M", "S"],
     ["Calculate the volume occupied by 0.50 mol of a gas at r.t.p.", 2, "M", "S"],
     ["Calculate the number of moles in 9.0 g of water. [Mr = 18]", 2, "M", "S"],
-    ["Calculate the mass of 2.0 mol of sodium chloride. [Mr = 58.5]", 2, "M", "S"],
-    ["25.0 cm³ of 0.10 mol/dm³ HCl is neutralised. Calculate the number of moles of HCl used.", 3, "H", "S"]
+    ["Calculate the percentage by mass of oxygen in water, H₂O. [Ar: H = 1, O = 16]", 3, "H", "S"],
+    ["25.0 cm³ of 0.10 mol/dm³ HCl is used in a titration. Calculate the number of moles of HCl.", 3, "H", "S"]
   ],
   "11. Acids and bases": [
     ["Define an acid in terms of hydrogen ions.", 2, "M", "T"],
@@ -66,7 +79,9 @@ module.exports = {
     ["Describe a neutralisation reaction and name the products formed.", 2, "M", "T"],
     ["Explain the difference between a strong acid and a weak acid.", 3, "H", "T"],
     ["Name the gas produced when a dilute acid reacts with a metal, and state the test for it.", 2, "E", "T"],
-    ["A solution has a hydrogen ion concentration giving pH 3. After dilution by a factor of ten, state the new pH.", 1, "M", "S"],
+    ["Describe how to carry out a titration to find the volume of acid needed to neutralise an alkali.", 4, "H", "T"],
+    ["State the products formed when an acid reacts with a metal carbonate.", 2, "M", "T"],
+    ["A solution has pH 3. After dilution by a factor of ten, state the new pH.", 1, "M", "S"],
     ["Calculate the volume of 0.20 mol/dm³ NaOH needed to neutralise 25.0 cm³ of 0.10 mol/dm³ HCl.", 3, "H", "S"],
     ["A solution of pH 1 is diluted one hundred times. State the new pH.", 2, "M", "S"],
     ["20.0 cm³ of acid is neutralised by 25.0 cm³ of 0.10 mol/dm³ alkali. Calculate the moles of alkali used.", 3, "H", "S"]
@@ -79,7 +94,11 @@ module.exports = {
     ["State how crystals are obtained from a salt solution.", 2, "E", "T"],
     ["Name the products formed when a metal carbonate reacts with a dilute acid.", 2, "E", "T"],
     ["Describe how filtration is used during the preparation of a soluble salt.", 2, "M", "T"],
-    ["State why distilled water rather than tap water is used when preparing a pure salt.", 1, "E", "T"]
+    ["State why distilled water rather than tap water is used when preparing a pure salt.", 1, "E", "T"],
+    ["Describe a test to confirm that all the acid has reacted during salt preparation.", 2, "H", "T"],
+    ["State the general name for the salt produced from sulfuric acid.", 1, "E", "T"],
+    ["Explain how two soluble salts can be used to make an insoluble salt.", 3, "H", "T"],
+    ["Describe how to obtain a pure dry sample of an insoluble salt after precipitation.", 3, "M", "T"]
   ],
   "13. The Periodic Table": [
     ["State how the elements are arranged in the modern Periodic Table.", 2, "E", "T"],
@@ -89,7 +108,11 @@ module.exports = {
     ["Explain why elements in the same group have similar chemical properties.", 2, "M", "T"],
     ["Describe the trend in colour and physical state of the Group VII elements down the group.", 3, "H", "T"],
     ["State what is meant by a group and a period in the Periodic Table.", 2, "E", "T"],
-    ["Predict the products formed when chlorine is added to potassium bromide solution, and explain.", 3, "H", "T"]
+    ["Predict the products when chlorine is added to potassium bromide solution, and explain.", 3, "H", "T"],
+    ["State two properties of the Group I metals.", 2, "E", "T"],
+    ["Describe how the reactivity of the Group VII elements changes down the group.", 2, "M", "T"],
+    ["Explain why Group I metals are stored under oil.", 2, "H", "T"],
+    ["State the number of electrons in the outer shell of a Group II element.", 1, "E", "T"]
   ],
   "14. Metallic elements and alloys": [
     ["State three typical physical properties of metals.", 3, "E", "T"],
@@ -99,7 +122,11 @@ module.exports = {
     ["Explain why copper is used for electrical wiring.", 2, "M", "T"],
     ["Describe the structure of a metal in terms of ions and delocalised electrons.", 3, "M", "T"],
     ["Explain why metals can be bent and shaped without breaking.", 2, "H", "T"],
-    ["State one use of an alloy and the property that makes it suitable.", 2, "E", "T"]
+    ["State one use of an alloy and the property that makes it suitable.", 2, "E", "T"],
+    ["Name the main metal present in brass and in steel.", 2, "E", "T"],
+    ["Explain why stainless steel is used to make cutlery.", 2, "M", "T"],
+    ["Describe how the properties of an alloy differ from a pure metal.", 2, "H", "T"],
+    ["State why aluminium is used for aircraft bodies.", 1, "E", "T"]
   ],
   "15. Reactivity of metals": [
     ["Describe the observations when a small piece of sodium is added to cold water.", 3, "M", "T"],
@@ -109,7 +136,11 @@ module.exports = {
     ["Describe what is observed when magnesium reacts with dilute hydrochloric acid.", 2, "E", "T"],
     ["Explain why a more reactive metal can displace a less reactive metal from its salt solution.", 2, "M", "T"],
     ["Describe the difference in reactivity between magnesium and copper with dilute acid.", 2, "M", "T"],
-    ["Predict whether zinc will displace copper from copper(II) sulfate solution and explain.", 3, "H", "T"]
+    ["Predict whether zinc will displace copper from copper(II) sulfate solution and explain.", 3, "H", "T"],
+    ["State the products formed when a reactive metal reacts with water.", 2, "M", "T"],
+    ["Explain why potassium is more reactive than sodium.", 2, "H", "T"],
+    ["Describe a test to show that one metal is more reactive than another using their oxides.", 3, "H", "T"],
+    ["State what is observed when calcium reacts with cold water.", 2, "M", "T"]
   ],
   "16. Extraction and corrosion of metals": [
     ["Explain why aluminium is extracted by electrolysis rather than by reduction with carbon.", 3, "H", "T"],
@@ -117,9 +148,12 @@ module.exports = {
     ["Describe how galvanising protects iron from rusting.", 3, "M", "T"],
     ["Describe the role of carbon in the extraction of iron in the blast furnace.", 3, "M", "T"],
     ["Explain why a metal high in the reactivity series is more difficult to extract from its ore.", 2, "M", "T"],
+    ["Describe sacrificial protection as a method of preventing rusting.", 3, "H", "T"],
+    ["State the name of the main ore of iron.", 1, "E", "T"],
     ["A 200 g sample of iron ore contains 70% iron(III) oxide. Calculate the mass of iron(III) oxide.", 2, "E", "S"],
     ["Calculate the maximum mass of iron obtainable from 160 g of Fe₂O₃. [Mr Fe₂O₃ = 160, Ar Fe = 56]", 3, "H", "S"],
-    ["An iron bar of mass 50 g loses 0.50 g due to rusting. Calculate the percentage loss in mass.", 2, "M", "S"]
+    ["An iron bar of mass 50 g loses 0.50 g due to rusting. Calculate the percentage loss in mass.", 2, "M", "S"],
+    ["A sample of ore contains 40% by mass of metal. Calculate the mass of metal in 500 g of ore.", 2, "M", "S"]
   ],
   "17. Chemistry of our environment": [
     ["State two gases that contribute to acid rain.", 2, "E", "T"],
@@ -129,7 +163,11 @@ module.exports = {
     ["Explain why treating water is important before it is supplied to homes.", 2, "M", "T"],
     ["State two greenhouse gases and one human activity that increases each.", 3, "H", "T"],
     ["Describe how acid rain damages the environment.", 2, "M", "T"],
-    ["State one way that individuals can reduce their contribution to climate change.", 1, "E", "T"]
+    ["State one way that individuals can reduce their contribution to climate change.", 1, "E", "T"],
+    ["Explain how carbon dioxide is produced by the combustion of fuels.", 2, "M", "T"],
+    ["Describe one consequence of global warming.", 2, "M", "T"],
+    ["Explain why incomplete combustion of fuels is dangerous indoors.", 2, "H", "T"],
+    ["State the gas responsible for most of the enhanced greenhouse effect.", 1, "E", "T"]
   ],
   "18. Introduction to organic chemistry": [
     ["Define the term hydrocarbon.", 2, "E", "T"],
@@ -139,7 +177,11 @@ module.exports = {
     ["Describe the test that distinguishes an alkane from an alkene, including the result.", 3, "M", "T"],
     ["Explain why members of a homologous series have similar chemical properties.", 2, "H", "T"],
     ["State the difference between a saturated and an unsaturated hydrocarbon.", 2, "M", "T"],
-    ["Name the first three members of the alkane series.", 2, "E", "T"]
+    ["Name the first three members of the alkane series.", 2, "E", "T"],
+    ["State what is meant by a functional group.", 2, "M", "T"],
+    ["Explain what is meant by structural isomers.", 2, "H", "T"],
+    ["Name the alkene with two carbon atoms.", 1, "E", "T"],
+    ["State the type of bond present between the carbon atoms in an alkene.", 1, "M", "T"]
   ],
   "19. Reactions of organic compounds": [
     ["Write a word equation for the complete combustion of ethanol.", 2, "M", "T"],
@@ -147,6 +189,8 @@ module.exports = {
     ["Describe the reaction of ethene with bromine water, including the colour change.", 2, "M", "T"],
     ["State the conditions required for the catalytic cracking of long-chain hydrocarbons.", 2, "M", "T"],
     ["Explain why cracking is carried out in the petrochemical industry.", 2, "H", "T"],
+    ["Describe how ethanol can be manufactured by the hydration of ethene.", 3, "H", "T"],
+    ["State the products of the complete combustion of a hydrocarbon.", 2, "E", "T"],
     ["Calculate the mass of carbon dioxide produced when 4.6 g of ethanol (Mr = 46) is completely combusted. [Mr CO₂ = 44]", 4, "H", "S"],
     ["State the volume at r.t.p. of 0.50 mol of carbon dioxide.", 2, "M", "S"],
     ["A fermentation produces 0.20 mol of ethanol. Calculate the mass of ethanol formed. [Mr = 46]", 2, "M", "S"]
@@ -159,7 +203,11 @@ module.exports = {
     ["Explain how poly(ethene) is formed from ethene monomers.", 3, "M", "T"],
     ["Name two useful fractions obtained from the fractional distillation of crude oil and a use of each.", 3, "H", "T"],
     ["Explain why many plastics are described as non-biodegradable.", 2, "M", "T"],
-    ["State one problem caused by burning plastic waste.", 1, "E", "T"]
+    ["State one problem caused by burning plastic waste.", 1, "E", "T"],
+    ["Describe how fractional distillation separates crude oil into fractions.", 3, "H", "T"],
+    ["State the raw material from which most plastics are made.", 1, "E", "T"],
+    ["Explain why longer-chain hydrocarbon fractions are less useful than shorter ones.", 2, "M", "T"],
+    ["Describe the relationship between the boiling point of a fraction and its chain length.", 2, "H", "T"]
   ],
   "21. Experimental design and separation techniques": [
     ["Describe how filtration separates an insoluble solid from a liquid.", 3, "M", "T"],
@@ -168,8 +216,12 @@ module.exports = {
     ["Explain how paper chromatography separates a mixture of coloured dyes.", 3, "M", "T"],
     ["State what is meant by an Rf value in chromatography.", 2, "M", "T"],
     ["Describe how to obtain pure salt crystals from a salt solution.", 2, "E", "T"],
-    ["State one way to check that a sample is a pure substance using melting point.", 2, "M", "T"],
-    ["Explain why a pencil line, not ink, is used to mark the start line in chromatography.", 2, "H", "T"]
+    ["State how the melting point of a substance can show whether it is pure.", 2, "M", "T"],
+    ["Explain why a pencil line, not ink, is used to mark the start line in chromatography.", 2, "H", "T"],
+    ["State the term for a liquid that has passed through filter paper.", 1, "E", "T"],
+    ["Describe how crystallisation is used to obtain a soluble solid from solution.", 2, "M", "T"],
+    ["Calculate the Rf value of a spot that travels 4.5 cm when the solvent travels 9.0 cm.", 2, "M", "T"],
+    ["Explain why the solvent level must be below the start line in chromatography.", 2, "H", "T"]
   ],
   "22. Chemical analysis": [
     ["Describe the test for hydrogen gas and the positive result.", 2, "E", "T"],
@@ -179,6 +231,10 @@ module.exports = {
     ["Describe the flame test colours for sodium ions and potassium ions.", 2, "M", "T"],
     ["Describe how to test for the presence of water using anhydrous copper(II) sulfate.", 2, "M", "T"],
     ["Describe the test for chloride ions using silver nitrate solution.", 3, "H", "T"],
-    ["State the observation when limewater is bubbled with carbon dioxide.", 1, "E", "T"]
+    ["State the observation when limewater is bubbled with carbon dioxide.", 1, "E", "T"],
+    ["Describe the flame test colour produced by copper ions.", 1, "M", "T"],
+    ["Describe the test for sulfate ions in solution.", 3, "H", "T"],
+    ["Describe how to test for the chlorine gas using litmus paper.", 2, "M", "T"],
+    ["State the colour change when anhydrous cobalt chloride paper detects water.", 2, "H", "T"]
   ]
 };

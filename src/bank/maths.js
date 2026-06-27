@@ -13,7 +13,12 @@ module.exports = {
     ["Work out −6 + 9 − 4.", 1, "E", "Q"],
     ["Write 0.00056 in standard form.", 2, "M", "Q"],
     ["Evaluate 3⁴ ÷ 3².", 2, "M", "Q"],
-    ["List all the factors of 24.", 2, "E", "Q"]
+    ["List all the factors of 24.", 2, "E", "Q"],
+    ["Round 5829 to two significant figures.", 1, "E", "Q"],
+    ["Write 0.375 as a fraction in its simplest form.", 2, "M", "Q"],
+    ["Calculate √196.", 1, "E", "Q"],
+    ["Work out 2³ × 5.", 1, "E", "Q"],
+    ["Insert brackets to make 4 + 6 × 2 = 20 a correct statement.", 2, "H", "Q"]
   ],
   "2. Making sense of algebra": [
     ["Simplify 7a − 3b + 4a + 5b.", 2, "E", "Q"],
@@ -25,31 +30,42 @@ module.exports = {
     ["Write an expression for the perimeter of a rectangle of length 2x and width x + 3.", 2, "M", "Q"],
     ["Simplify 12xy ÷ 4x.", 2, "M", "Q"],
     ["Expand and simplify (x + 4)(x − 3).", 2, "H", "Q"],
-    ["Substitute a = 3 into 2a² + 5.", 1, "E", "Q"]
+    ["Substitute a = 3 into 2a² + 5.", 1, "E", "Q"],
+    ["Simplify 5x + 2y − 3x + 4y.", 2, "E", "Q"],
+    ["Write down the value of 7⁰.", 1, "E", "Q"],
+    ["Simplify (2x³)².", 2, "H", "Q"],
+    ["Factorise 6x + 9.", 2, "M", "Q"],
+    ["Collect like terms: 8a − 5 + 2a + 7.", 2, "E", "Q"]
   ],
   "3. Lines, angles and shapes": [
     ["The angles in a triangle are 2x, 3x and 4x degrees. Find x.", 2, "M", "Q"],
     ["Find the size of each interior angle of a regular hexagon.", 2, "M", "Q"],
     ["Two parallel lines are cut by a transversal. One angle is 68°. State the size of its corresponding angle.", 1, "E", "Q"],
     ["The exterior angle of a regular polygon is 30°. Find the number of sides.", 2, "M", "Q"],
-    ["Find the size of the missing angle in a triangle containing angles of 47° and 68°.", 1, "E", "Q"],
+    ["Find the missing angle in a triangle containing angles of 47° and 68°.", 1, "E", "Q"],
     ["State the sum of the interior angles of a pentagon.", 2, "M", "Q"],
     ["Two angles on a straight line are 115° and x°. Find x.", 1, "E", "Q"],
     ["Find the size of each exterior angle of a regular octagon.", 2, "M", "Q"],
     ["Angles around a point are 90°, 120°, 75° and x°. Find x.", 2, "M", "Q"],
-    ["Explain why the angles of a quadrilateral add up to 360°.", 2, "H", "Q"]
+    ["Explain why the angles of a quadrilateral add up to 360°.", 2, "H", "Q"],
+    ["Find the size of each interior angle of an equilateral triangle.", 1, "E", "Q"],
+    ["Two angles are co-interior. One is 110°. Find the other.", 2, "M", "Q"],
+    ["A triangle has two equal angles of 50°. Find the third angle.", 1, "E", "Q"],
+    ["Find the number of sides of a regular polygon with interior angle 150°.", 3, "H", "Q"]
   ],
   "4. Collecting, organising and displaying data": [
     ["The values 3, 4, 4, 5, 6, 6, 6, 8 are recorded. State the mode.", 1, "E", "Q"],
     ["The frequencies for four groups are 5, 8, 11 and 6. Calculate the total frequency.", 1, "E", "Q"],
     ["Explain why a sample of 10 students from one class may not represent a whole school.", 2, "M", "Q"],
-    ["A pie chart shows 4 categories. One category has 90 of 360 people. Calculate the angle for this category.", 2, "M", "Q"],
+    ["A pie chart shows 4 categories. One has 90 of 360 people. Calculate the angle for this category.", 2, "M", "Q"],
     ["State a suitable type of chart for displaying the favourite sport of a class.", 1, "E", "Q"],
     ["In a bar chart the bars have heights 5, 9, 7 and 3. Calculate the total frequency.", 1, "E", "Q"],
-    ["A frequency table has values 1, 2, 3 with frequencies 4, 6, 10. Calculate the total number of values.", 2, "M", "Q"],
     ["Describe one advantage of using a pie chart to display data.", 2, "M", "Q"],
-    ["The angle for a category in a pie chart is 72° out of 360°. Calculate the fraction of the total it represents.", 2, "H", "Q"],
-    ["State the difference between discrete and continuous data.", 2, "M", "Q"]
+    ["State the difference between discrete and continuous data.", 2, "M", "Q"],
+    ["A category in a pie chart has angle 72° out of 360°. Calculate the fraction of the total it represents.", 2, "H", "Q"],
+    ["Give one example of discrete data and one example of continuous data.", 2, "M", "Q"],
+    ["A tally shows 12 marks for one category. State the frequency.", 1, "E", "Q"],
+    ["Explain why a frequency table is useful for organising a large set of data.", 2, "H", "Q"]
   ],
   "5. Fractions, percentages and standard form": [
     ["Calculate 3/4 + 5/8, giving your answer in its simplest form.", 2, "M", "Q"],
@@ -61,7 +77,11 @@ module.exports = {
     ["Decrease 80 by 15%.", 2, "M", "Q"],
     ["Calculate 2/3 of 51.", 1, "E", "Q"],
     ["A price of $50 increases by 8%. Calculate the new price.", 2, "M", "Q"],
-    ["Write 4.2 × 10⁵ as an ordinary number.", 1, "E", "Q"]
+    ["Write 4.2 × 10⁵ as an ordinary number.", 1, "E", "Q"],
+    ["Express 18 as a percentage of 40.", 2, "M", "Q"],
+    ["Calculate 5/6 − 1/4.", 2, "M", "Q"],
+    ["Write 240 000 in standard form.", 1, "E", "Q"],
+    ["A shirt costing $40 is reduced by 25% in a sale. Calculate the sale price.", 2, "H", "Q"]
   ],
   "6. Equations, factors and formulae": [
     ["Solve 5x − 7 = 3x + 9.", 2, "M", "Q"],
@@ -73,7 +93,11 @@ module.exports = {
     ["Solve x² − 9 = 0.", 2, "M", "Q"],
     ["Make c the subject of the formula v = u + c.", 1, "E", "Q"],
     ["Solve 3x − 4 = 11.", 1, "E", "Q"],
-    ["Factorise x² − 16.", 2, "H", "Q"]
+    ["Factorise x² − 16.", 2, "H", "Q"],
+    ["Solve x/3 = 6.", 1, "E", "Q"],
+    ["Make h the subject of A = b × h.", 2, "M", "Q"],
+    ["Factorise 8a + 12b.", 2, "M", "Q"],
+    ["Solve 2x + 3 = 4x − 5.", 2, "H", "Q"]
   ],
   "7. Perimeter, area and volume": [
     ["Calculate the area of a circle of radius 7 cm, giving your answer in terms of π.", 2, "M", "Q"],
@@ -85,7 +109,11 @@ module.exports = {
     ["Calculate the area of a rectangle 14 cm by 8 cm.", 1, "E", "Q"],
     ["A square has area 49 cm². Find the length of one side.", 2, "M", "Q"],
     ["Calculate the volume of a cube of side 5 cm.", 2, "M", "Q"],
-    ["A circle has diameter 20 cm. Calculate its area in terms of π.", 2, "H", "Q"]
+    ["A circle has diameter 20 cm. Calculate its area in terms of π.", 2, "H", "Q"],
+    ["Calculate the area of a parallelogram with base 10 cm and height 6 cm.", 2, "M", "Q"],
+    ["Calculate the area of a trapezium with parallel sides 6 cm and 10 cm and height 4 cm.", 3, "H", "Q"],
+    ["Find the perimeter of a square of side 9 cm.", 1, "E", "Q"],
+    ["Calculate the surface area of a cube of side 3 cm.", 3, "H", "Q"]
   ],
   "8. Introduction to probability": [
     ["A fair spinner has eight equal sections numbered 1 to 8. Find the probability of spinning an even number.", 2, "E", "Q"],
@@ -94,10 +122,13 @@ module.exports = {
     ["Two fair coins are tossed. Find the probability of obtaining two heads.", 2, "M", "Q"],
     ["A bag contains 5 red, 3 blue and 2 green counters. Find the probability of choosing a blue counter.", 2, "E", "Q"],
     ["A fair six-sided die is rolled. Find the probability of scoring more than 4.", 2, "M", "Q"],
-    ["The probability of rain is 0.30. Find the probability of no rain.", 1, "E", "Q"],
     ["A bag has 4 red and 6 yellow balls. Find the probability of choosing a red ball.", 2, "E", "Q"],
     ["Two fair dice are rolled. Find the probability of getting a total of 7.", 3, "H", "Q"],
-    ["A spinner has 10 equal sections, 3 shaded. Find the probability of landing on an unshaded section.", 2, "M", "Q"]
+    ["A spinner has 10 equal sections, 3 shaded. Find the probability of landing on an unshaded section.", 2, "M", "Q"],
+    ["State the probability of an event that is certain to happen.", 1, "E", "Q"],
+    ["The probability of rain is 0.30. Find the probability of no rain.", 1, "E", "Q"],
+    ["A box has 8 pens, 3 of which are red. Find the probability of choosing a red pen.", 2, "M", "Q"],
+    ["Two events have probabilities 0.4 and 0.5 and cannot both happen. Find the probability that either occurs.", 3, "H", "Q"]
   ],
   "9. Sequences, surds and sets": [
     ["Find the next two terms of the sequence 5, 9, 13, 17, …", 1, "E", "Q"],
@@ -108,8 +139,11 @@ module.exports = {
     ["Write down the first three terms of the sequence with nth term 2n − 1.", 2, "M", "Q"],
     ["Simplify √8 + √2.", 3, "H", "Q"],
     ["List the members of the set of even numbers between 1 and 11.", 1, "E", "Q"],
-    ["Find the next term of the sequence 2, 6, 18, 54, …", 2, "M", "Q"],
-    ["State whether √16 is rational or irrational, giving a reason.", 2, "M", "Q"]
+    ["Find the next term of the geometric sequence 2, 6, 18, 54, …", 2, "M", "Q"],
+    ["State whether √16 is rational or irrational, giving a reason.", 2, "M", "Q"],
+    ["Find the nth term of 2, 5, 8, 11, …", 2, "M", "Q"],
+    ["Rationalise the denominator of 1/√2.", 3, "H", "Q"],
+    ["List the elements of the set of factors of 12.", 1, "E", "Q"]
   ],
   "10. Straight lines and quadratic equations": [
     ["The points A(2, 5) and B(8, 17) lie on a straight line. Find its gradient.", 2, "M", "Q"],
@@ -127,7 +161,7 @@ module.exports = {
     ["Factorise x² − 16.", 2, "M", "Q"],
     ["Find the length of the line segment joining (0, 0) and (3, 4).", 3, "H", "Q"],
     ["Find the gradient of a line perpendicular to y = 2x + 1.", 2, "H", "Q"],
-    ["State the coordinates of the turning point's line of symmetry for y = x² − 4x + 3 by finding where it crosses the x-axis.", 3, "H", "Q"]
+    ["Find where the line y = x² − 4x + 3 crosses the x-axis.", 3, "H", "Q"]
   ],
   "11. Pythagoras' theorem and similar shapes": [
     ["A right-angled triangle has hypotenuse 13 cm and one shorter side 5 cm. Find the third side.", 3, "M", "Q"],
@@ -138,8 +172,10 @@ module.exports = {
     ["A right-angled triangle has shorter sides 6 cm and 8 cm. Calculate the hypotenuse.", 2, "E", "Q"],
     ["A ladder of length 5 m leans against a wall with its base 3 m away. Find how far up the wall it reaches.", 3, "M", "Q"],
     ["Two similar rectangles have widths 5 cm and 15 cm. Find the scale factor.", 1, "E", "Q"],
-    ["A right-angled triangle has legs 5 cm and 12 cm. Calculate the hypotenuse.", 2, "M", "Q"],
-    ["A square has diagonal 10 cm. Calculate the length of one side.", 3, "H", "Q"]
+    ["A square has diagonal 10 cm. Calculate the length of one side.", 3, "H", "Q"],
+    ["State Pythagoras' theorem for a right-angled triangle.", 1, "E", "Q"],
+    ["Two similar triangles have a length scale factor of 2. State the ratio of their areas.", 2, "H", "Q"],
+    ["A right-angled triangle has legs 7 cm and 24 cm. Calculate the hypotenuse.", 2, "M", "Q"]
   ],
   "12. Averages and measures of spread": [
     ["Find the mean of 6, 9, 11, 14 and 20.", 2, "E", "Q"],
@@ -151,7 +187,9 @@ module.exports = {
     ["Find the mean of 10, 20, 30 and 40.", 1, "E", "Q"],
     ["The range of a data set is 14 and the smallest value is 7. Find the largest value.", 2, "M", "Q"],
     ["Find the median of 12, 5, 9, 20, 14, 8.", 2, "H", "Q"],
-    ["Four numbers have a mean of 15. Three of them are 12, 18 and 14. Find the fourth.", 3, "H", "Q"]
+    ["Four numbers have a mean of 15. Three of them are 12, 18 and 14. Find the fourth.", 3, "H", "Q"],
+    ["State the difference between the mean and the median of a data set.", 2, "M", "Q"],
+    ["Find the mode of 5, 5, 6, 7, 7, 7, 9.", 1, "E", "Q"]
   ],
   "14. Further solving of equations and inequalities": [
     ["Solve the inequality 3x + 5 < 20.", 2, "M", "Q"],
@@ -163,7 +201,9 @@ module.exports = {
     ["Solve 2(x + 3) = 16.", 1, "E", "Q"],
     ["Solve the inequality 5x < 35.", 1, "E", "Q"],
     ["Solve x² − 5x + 6 = 0.", 2, "H", "Q"],
-    ["List the integer values of x that satisfy −2 < x ≤ 3.", 2, "M", "Q"]
+    ["List the integer values of x that satisfy −2 < x ≤ 3.", 2, "M", "Q"],
+    ["Solve the inequality 2x + 1 > 7.", 1, "E", "Q"],
+    ["Solve the simultaneous equations 2x + y = 7 and x − y = 2.", 3, "H", "Q"]
   ],
   "16. Scatter diagrams and correlation": [
     ["State the type of correlation expected between the age of a car and its resale value.", 1, "E", "Q"],
@@ -175,6 +215,8 @@ module.exports = {
     ["Explain how a line of best fit is used to estimate a value.", 2, "M", "Q"],
     ["State the type of correlation between outside temperature and the amount of heating used.", 1, "E", "Q"],
     ["Describe the strength and type of correlation when points lie exactly on a downward line.", 2, "H", "Q"],
-    ["Explain why a line of best fit should follow the trend of the points rather than join them.", 2, "H", "Q"]
+    ["Explain why a line of best fit should follow the trend of the points rather than join them.", 2, "H", "Q"],
+    ["State what is meant by an outlier on a scatter diagram.", 2, "M", "Q"],
+    ["Describe the correlation between the number of hours of sunshine and ice cream sales.", 2, "M", "Q"]
   ]
 };

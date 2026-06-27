@@ -1,34 +1,43 @@
 // src/bank/physics.js — Cambridge IGCSE Physics 0625, chapters 1–16.
 // Each entry: [text, marks, difficulty(E|M|H), type(T=theory|S=sums)].
+// Questions within a chapter are kept conceptually distinct so the number-only
+// dedupe does not collapse them.
 
 module.exports = {
   "1. Making measurements": [
     ["State the SI unit of length and the SI unit of mass.", 1, "E", "T"],
     ["Describe how to measure the thickness of a single sheet of paper accurately using a ruler.", 3, "M", "T"],
-    ["Explain why taking the time for 20 oscillations of a pendulum gives a more accurate value for the period than timing one oscillation.", 3, "M", "T"],
+    ["Explain why timing 20 oscillations of a pendulum gives a more accurate value for the period than timing one.", 3, "M", "T"],
     ["Describe how to use a measuring cylinder to find the volume of a small irregular stone.", 3, "M", "T"],
     ["State what is meant by the density of a substance.", 1, "E", "T"],
-    ["A student measures a length using a ruler. Explain how a parallax error can occur and how to avoid it.", 2, "M", "T"],
+    ["Explain how a parallax error can occur when reading a scale and how to avoid it.", 2, "M", "T"],
+    ["Name a suitable instrument for measuring the diameter of a wire precisely.", 1, "E", "T"],
+    ["Explain why an average of several readings is more reliable than a single reading.", 2, "M", "T"],
+    ["Describe how to measure the volume of a regularly shaped block.", 2, "E", "T"],
     ["A block has a mass of 240 g and a volume of 30 cm³. Calculate its density.", 2, "E", "S"],
-    ["A measuring cylinder reads 25 cm³ before and 41 cm³ after a stone is lowered in. Calculate the volume of the stone.", 1, "E", "S"],
+    ["A measuring cylinder reads 25 cm³ before and 41 cm³ after a stone is added. Calculate the volume of the stone.", 1, "E", "S"],
     ["A pendulum takes 30 s to complete 20 oscillations. Calculate its period.", 2, "E", "S"],
     ["A liquid of density 0.80 g/cm³ has a volume of 250 cm³. Calculate its mass.", 2, "M", "S"],
-    ["A rectangular block measures 4.0 cm by 5.0 cm by 2.0 cm and has a mass of 320 g. Calculate its density.", 3, "M", "S"],
-    ["A wire is wound 40 times around a pencil and the coil is 8.0 mm wide. Calculate the diameter of the wire.", 3, "H", "S"]
+    ["A wire is wound 40 times around a pencil and the coil is 8.0 mm wide. Calculate the diameter of the wire.", 3, "H", "S"],
+    ["Convert a length of 2.5 m into millimetres.", 1, "E", "S"],
+    ["A cube of side 2.0 cm has a mass of 64 g. Calculate its density.", 3, "M", "S"]
   ],
   "2. Describing motion": [
     ["State the difference between speed and velocity.", 2, "E", "T"],
     ["Describe the motion shown by a horizontal line on a distance–time graph.", 1, "E", "T"],
-    ["Explain how the gradient of a distance–time graph is related to the speed of an object.", 2, "M", "T"],
-    ["Describe how the area under a speed–time graph can be used to find the distance travelled.", 2, "M", "T"],
+    ["Explain how the gradient of a distance–time graph represents speed.", 2, "M", "T"],
+    ["Describe how the area under a speed–time graph is used to find distance travelled.", 2, "M", "T"],
     ["Define acceleration and state its SI unit.", 2, "E", "T"],
-    ["Explain the motion of an object whose speed–time graph is a straight horizontal line above the time axis.", 2, "M", "T"],
+    ["Describe the motion of an object whose speed–time graph is a straight line sloping upwards.", 2, "M", "T"],
+    ["Explain the difference between a scalar and a vector quantity, giving one example of each.", 2, "M", "T"],
+    ["State what a curved line of increasing gradient on a distance–time graph indicates.", 2, "M", "T"],
     ["A cyclist travels 180 m in 15 s. Calculate the average speed.", 2, "E", "S"],
     ["A car increases its velocity from 8.0 m/s to 20 m/s in 6.0 s. Calculate its acceleration.", 2, "M", "S"],
     ["A train travels at a constant speed of 30 m/s for 5.0 minutes. Calculate the distance travelled.", 2, "M", "S"],
     ["A car decelerates uniformly from 24 m/s to rest in 8.0 s. Calculate the deceleration.", 2, "M", "S"],
     ["A speed–time graph shows an object accelerating from rest to 12 m/s in 8.0 s. Calculate the distance travelled.", 3, "H", "S"],
-    ["An object travels 100 m in the first 10 s and 300 m in the next 10 s. Calculate its average speed over the whole journey.", 3, "H", "S"]
+    ["An object travels 100 m in 10 s, then 300 m in the next 10 s. Calculate the average speed for the whole journey.", 3, "H", "S"],
+    ["A runner completes 400 m in 50 s. Calculate the average speed.", 1, "E", "S"]
   ],
   "3. Forces and motion": [
     ["State Newton's first law of motion.", 2, "E", "T"],
@@ -37,54 +46,58 @@ module.exports = {
     ["State two factors that increase the braking distance of a car.", 2, "E", "T"],
     ["Explain, in terms of momentum, why a seat belt reduces the force on a passenger in a collision.", 3, "H", "T"],
     ["Explain what is meant by the resultant force on an object.", 2, "M", "T"],
+    ["Describe how air resistance affects a falling object until it reaches terminal velocity.", 3, "H", "T"],
+    ["State the relationship between resultant force, mass and acceleration.", 1, "E", "T"],
     ["A car of mass 900 kg accelerates at 2.5 m/s². Calculate the resultant force on the car.", 2, "E", "S"],
     ["Calculate the weight of a 7.5 kg object on Earth. Use g = 10 N/kg.", 2, "E", "S"],
     ["A box experiences a forward force of 75 N and friction of 27 N. Its mass is 12 kg. Calculate its acceleration.", 3, "M", "S"],
     ["A 0.40 kg ball moving at 12 m/s is brought to rest. Calculate the change in momentum.", 2, "M", "S"],
     ["A trolley of mass 0.80 kg moves at 3.5 m/s. Calculate its momentum.", 2, "E", "S"],
-    ["A 1500 kg car changes speed from 8.0 m/s to 20 m/s in 6.0 s. Calculate the resultant force on it.", 3, "H", "S"]
+    ["A resultant force of 3000 N acts on a 1500 kg car. Calculate its acceleration.", 2, "M", "S"],
+    ["A 0.15 kg ball is kicked and gains a velocity of 20 m/s in 0.02 s. Calculate the force applied.", 3, "H", "S"]
   ],
   "4. Turning effects": [
     ["State what is meant by the moment of a force.", 2, "E", "T"],
     ["State the principle of moments.", 2, "M", "T"],
     ["Explain why a door handle is placed as far as possible from the hinges.", 2, "M", "T"],
     ["Define the centre of gravity of an object.", 1, "E", "T"],
-    ["Explain how a low centre of gravity and a wide base improve the stability of an object.", 3, "H", "T"],
+    ["Explain how a low centre of gravity and a wide base improve stability.", 3, "H", "T"],
     ["Describe an experiment to find the centre of gravity of an irregular card.", 3, "M", "T"],
+    ["State the condition for an object to be in equilibrium under several forces.", 2, "M", "T"],
     ["A force of 18 N acts 0.40 m from a pivot. Calculate the moment of the force.", 2, "E", "S"],
     ["A child of weight 240 N sits 1.5 m from a pivot. Calculate the moment about the pivot.", 2, "E", "S"],
     ["A see-saw is balanced. A 300 N child sits 1.2 m from the pivot. Calculate the distance a 360 N child must sit on the other side.", 3, "M", "S"],
-    ["A uniform beam is balanced. A 4.0 N weight is 0.30 m left of the pivot. Calculate the moment it produces.", 2, "M", "S"],
-    ["Two forces of 5.0 N each act 0.20 m apart in opposite directions. Calculate the total turning effect.", 3, "H", "S"],
-    ["A spanner of length 0.25 m applies a moment of 6.0 N m to a nut. Calculate the force applied.", 2, "M", "S"]
+    ["A spanner of length 0.25 m applies a moment of 6.0 N m to a nut. Calculate the force applied.", 2, "M", "S"],
+    ["A uniform beam of weight 40 N rests on a pivot at its centre. State the moment of its weight about the pivot.", 2, "H", "S"],
+    ["Two children balance a see-saw. One of weight 250 N sits 2.0 m from the pivot. Calculate the moment she produces.", 2, "M", "S"]
   ],
   "5. Forces and matter": [
     ["State Hooke's law.", 2, "E", "T"],
     ["Distinguish between elastic and plastic deformation.", 2, "M", "T"],
     ["Define pressure and state its SI unit.", 2, "E", "T"],
     ["Explain why a sharp knife cuts more easily than a blunt one.", 2, "M", "T"],
-    ["Describe what happens to a spring when it is stretched beyond its limit of proportionality.", 2, "M", "T"],
-    ["Explain why the pressure exerted by a liquid increases with depth.", 3, "H", "T"],
+    ["Describe what happens to a spring stretched beyond its limit of proportionality.", 2, "M", "T"],
+    ["Explain why the pressure in a liquid increases with depth.", 3, "H", "T"],
+    ["Describe an experiment to investigate how the extension of a spring depends on the load.", 4, "H", "T"],
     ["A force of 60 N acts on an area of 0.020 m². Calculate the pressure.", 2, "E", "S"],
     ["A spring extends by 4.0 cm when a force of 6.0 N is applied. Calculate the spring constant in N/m.", 3, "M", "S"],
     ["A block exerts a pressure of 2500 Pa on an area of 0.030 m². Calculate the force.", 2, "M", "S"],
-    ["A spring has a spring constant of 25 N/m. Calculate the extension produced by a 5.0 N force.", 2, "M", "S"],
     ["A column of water 2.0 m deep has density 1000 kg/m³. Calculate the pressure at the bottom. Use g = 10 N/kg.", 3, "H", "S"],
-    ["A force of 150 N acts on a piston of area 0.005 m². Calculate the pressure produced.", 2, "E", "S"]
+    ["A spring of spring constant 25 N/m carries a load that produces an extension of 0.20 m. Calculate the load.", 2, "M", "S"]
   ],
   "6. Energy stores and transfers": [
     ["State the principle of conservation of energy.", 2, "E", "T"],
     ["Define efficiency.", 1, "E", "T"],
-    ["Describe the energy transfers that take place as a ball falls and bounces.", 3, "M", "T"],
+    ["Describe the energy transfers as a ball falls and bounces.", 3, "M", "T"],
     ["Explain why no real machine can be 100% efficient.", 2, "M", "T"],
     ["Name the energy store that increases as a car is driven up a hill at constant speed.", 1, "E", "T"],
     ["Explain how energy is transferred usefully and wastefully in a filament lamp.", 3, "H", "T"],
+    ["Describe the energy transfer in a hydroelectric power station from stored water to electricity.", 3, "M", "T"],
     ["Calculate the kinetic energy of a 1200 kg car moving at 15 m/s.", 3, "M", "S"],
     ["A 2.0 kg mass is lifted 3.0 m. Calculate the gain in gravitational potential energy. Use g = 10 N/kg.", 2, "E", "S"],
     ["A device usefully transfers 240 J from 300 J supplied. Calculate its efficiency.", 2, "M", "S"],
-    ["Calculate the kinetic energy of a 0.50 kg ball moving at 8.0 m/s.", 2, "E", "S"],
-    ["A motor lifts a 50 N load through 4.0 m. Calculate the work done and hence the energy transferred.", 3, "M", "S"],
-    ["A pendulum bob of mass 0.20 kg is raised 0.45 m. Calculate its maximum speed at the lowest point. Use g = 10 N/kg.", 4, "H", "S"]
+    ["A pendulum bob of mass 0.20 kg is raised 0.45 m. Calculate its maximum speed at the lowest point. Use g = 10 N/kg.", 4, "H", "S"],
+    ["A 0.50 kg ball is dropped from 1.8 m. Calculate its speed just before it hits the ground. Use g = 10 N/kg.", 3, "H", "S"]
   ],
   "7. Energy resources": [
     ["State one renewable and one non-renewable energy resource.", 2, "E", "T"],
@@ -96,7 +109,11 @@ module.exports = {
     ["Describe how electricity is generated in a hydroelectric power station.", 3, "M", "T"],
     ["Explain why nuclear power stations do not contribute to the greenhouse effect during operation.", 2, "M", "T"],
     ["State two reasons why fossil fuels are still widely used despite their disadvantages.", 2, "E", "T"],
-    ["Compare renewable and non-renewable energy resources in terms of availability.", 3, "H", "T"]
+    ["Compare renewable and non-renewable energy resources in terms of availability.", 3, "H", "T"],
+    ["Describe how geothermal energy is used to generate electricity.", 2, "M", "T"],
+    ["State one advantage and one disadvantage of nuclear power.", 2, "M", "T"],
+    ["Explain why energy resources should be compared using more than just cost.", 2, "H", "T"],
+    ["Describe how a tidal barrage generates electricity.", 2, "M", "T"]
   ],
   "8. Work and power": [
     ["Define work done by a force.", 2, "E", "T"],
@@ -104,12 +121,13 @@ module.exports = {
     ["Explain why a more powerful motor can raise the same load in a shorter time.", 2, "M", "T"],
     ["State the condition under which a force does no work on a moving object.", 2, "M", "T"],
     ["Explain the energy transfer when a crane lifts a load at constant speed.", 2, "M", "T"],
+    ["State the relationship between work done, force and distance.", 1, "E", "T"],
     ["A force of 45 N moves a box 6.0 m in the direction of the force. Calculate the work done.", 2, "E", "S"],
     ["A motor transfers 3600 J in 30 s. Calculate its power.", 2, "E", "S"],
     ["A crane lifts a 500 N load through 8.0 m in 20 s. Calculate the work done and the power.", 4, "M", "S"],
     ["A person of weight 600 N climbs stairs of height 4.0 m in 8.0 s. Calculate their power output.", 3, "M", "S"],
-    ["A pump does 9000 J of work in raising water in 45 s. Calculate the output power.", 2, "M", "S"],
     ["A 2.0 kW heater is used for 5.0 minutes. Calculate the energy it transfers.", 3, "H", "S"],
+    ["A pump does 9000 J of work raising water in 45 s. Calculate the output power.", 2, "M", "S"],
     ["A force of 20 N pulls a sledge 15 m. Calculate the work done.", 2, "E", "S"]
   ],
   "9. The kinetic particle model of matter": [
@@ -119,10 +137,12 @@ module.exports = {
     ["State what is observed in Brownian motion and what it shows.", 2, "M", "T"],
     ["Explain why a gas can be compressed but a liquid cannot easily be compressed.", 2, "M", "T"],
     ["Explain why the pressure of a fixed mass of gas increases when its temperature rises at constant volume.", 3, "H", "T"],
-    ["A gas occupies 250 cm³ at a pressure of 100 kPa. At constant temperature the pressure rises to 200 kPa. Calculate the new volume.", 3, "M", "S"],
+    ["Describe what happens to the particles of a gas when it is cooled towards absolute zero.", 2, "H", "T"],
+    ["A gas occupies 250 cm³ at 100 kPa. At constant temperature the pressure rises to 200 kPa. Calculate the new volume.", 3, "M", "S"],
     ["A gas has a volume of 60 cm³ at 100 kPa. Calculate its pressure when compressed to 20 cm³ at constant temperature.", 3, "H", "S"],
-    ["A fixed mass of gas at 200 kPa occupies 0.50 m³. Calculate the volume when the pressure falls to 125 kPa at constant temperature.", 3, "H", "S"],
-    ["The temperature of a gas rises from 27 °C. Convert this temperature to kelvin.", 1, "E", "S"]
+    ["A fixed mass of gas at 200 kPa occupies 0.50 m³. Calculate the volume when the pressure falls to 125 kPa.", 3, "H", "S"],
+    ["The temperature of a gas is 27 °C. Convert this temperature to kelvin.", 1, "E", "S"],
+    ["A gas at 300 K is heated to 600 K at constant pressure. State the factor by which its volume increases.", 2, "M", "S"]
   ],
   "10. Thermal properties of matter": [
     ["Define the specific heat capacity of a substance.", 2, "M", "T"],
@@ -131,33 +151,39 @@ module.exports = {
     ["State two differences between boiling and evaporation.", 2, "M", "T"],
     ["Explain why evaporation causes the temperature of a liquid to fall.", 3, "H", "T"],
     ["State what is meant by the latent heat of a substance.", 1, "E", "T"],
+    ["Describe an experiment to measure the specific heat capacity of a metal block.", 4, "H", "T"],
     ["Calculate the energy needed to raise the temperature of 2.0 kg of water by 15 °C. Use c = 4200 J/(kg °C).", 3, "M", "S"],
-    ["A 0.50 kg metal block receives 9000 J and rises 40 °C in temperature. Calculate its specific heat capacity.", 3, "M", "S"],
-    ["Calculate the energy required to heat 0.30 kg of water from 20 °C to 100 °C. Use c = 4200 J/(kg °C).", 3, "H", "S"],
+    ["A 0.50 kg metal block receives 9000 J and rises 40 °C. Calculate its specific heat capacity.", 3, "M", "S"],
     ["A heater supplies 24 000 J to a liquid in 120 s. Calculate the power of the heater.", 2, "E", "S"],
-    ["1.5 kg of a metal cools by 30 °C and releases 18 900 J. Calculate its specific heat capacity.", 3, "H", "S"],
+    ["1.5 kg of metal cools by 30 °C and releases 18 900 J. Calculate its specific heat capacity.", 3, "H", "S"],
     ["Convert a temperature of 350 K to degrees Celsius.", 1, "E", "S"]
   ],
   "11. Thermal energy transfers": [
     ["Describe how thermal energy is transferred through a metal by conduction.", 3, "M", "T"],
     ["Explain how convection currents are set up in a heated liquid.", 3, "M", "T"],
-    ["State how the colour and texture of a surface affect the rate at which it emits thermal radiation.", 2, "M", "T"],
+    ["State how the colour and texture of a surface affect the rate at which it emits radiation.", 2, "M", "T"],
     ["Explain why metals are good conductors of thermal energy.", 2, "M", "T"],
     ["Explain why convection cannot occur in a solid.", 2, "M", "T"],
     ["Describe one way to reduce thermal energy loss from a house and explain how it works.", 3, "H", "T"],
     ["State why a vacuum prevents thermal energy transfer by conduction and convection.", 2, "M", "T"],
     ["Explain why a shiny silver surface is a poor emitter of thermal radiation.", 2, "M", "T"],
-    ["Describe an experiment to compare the emission of radiation from dull and shiny surfaces.", 3, "H", "T"],
-    ["State the main method of thermal energy transfer through a vacuum.", 1, "E", "T"]
+    ["Describe an experiment to compare radiation emitted from dull and shiny surfaces.", 3, "H", "T"],
+    ["State the main method of thermal energy transfer through a vacuum.", 1, "E", "T"],
+    ["Explain why fitting curtains reduces heat loss from a room.", 2, "M", "T"],
+    ["Explain why metal feels colder to touch than wood at the same temperature.", 3, "H", "T"],
+    ["State why the heating element in a kettle is placed near the bottom.", 2, "M", "T"],
+    ["Describe how a vacuum flask reduces all three methods of thermal energy transfer.", 4, "H", "T"]
   ],
   "12. Sound": [
     ["Describe how a vibrating object produces a sound wave in air.", 2, "M", "T"],
     ["Explain why sound cannot travel through a vacuum.", 2, "M", "T"],
-    ["State the relationship between the loudness of a sound and the amplitude of the wave.", 1, "E", "T"],
+    ["State the relationship between loudness and the amplitude of a sound wave.", 1, "E", "T"],
     ["Describe how an echo is produced.", 2, "M", "T"],
     ["State the approximate range of frequencies audible to a healthy human ear.", 1, "E", "T"],
-    ["Explain how the pitch of a sound is related to the frequency of the wave.", 2, "M", "T"],
-    ["An echo returns 0.50 s after a shout. The speed of sound is 340 m/s. Calculate the distance to the reflecting wall.", 3, "M", "S"],
+    ["Explain how the pitch of a sound is related to the frequency.", 2, "M", "T"],
+    ["State one use of ultrasound.", 1, "E", "T"],
+    ["Explain why sound travels faster in solids than in gases.", 2, "H", "T"],
+    ["An echo returns 0.50 s after a shout. The speed of sound is 340 m/s. Calculate the distance to the wall.", 3, "M", "S"],
     ["A sound wave has a frequency of 400 Hz and a wavelength of 0.85 m. Calculate its speed.", 2, "M", "S"],
     ["Ultrasound takes 0.04 s to travel to the sea bed and back. The speed of sound in water is 1500 m/s. Calculate the depth.", 3, "H", "S"],
     ["A sound wave travels at 340 m/s with a frequency of 170 Hz. Calculate its wavelength.", 2, "M", "S"]
@@ -165,10 +191,12 @@ module.exports = {
   "13. Light": [
     ["State the law of reflection.", 2, "E", "T"],
     ["Define refraction of light.", 1, "E", "T"],
-    ["Explain why a ray of light bends towards the normal when it enters glass from air.", 2, "M", "T"],
+    ["Explain why a ray of light bends towards the normal when entering glass from air.", 2, "M", "T"],
     ["Describe the difference between a real image and a virtual image.", 2, "M", "T"],
-    ["Describe the effect of a converging lens on rays of light parallel to its axis.", 2, "M", "T"],
-    ["Explain what is meant by total internal reflection and state the conditions needed for it.", 3, "H", "T"],
+    ["Describe the effect of a converging lens on rays parallel to its axis.", 2, "M", "T"],
+    ["Explain what is meant by total internal reflection and state the conditions needed.", 3, "H", "T"],
+    ["Describe the nature of the image formed in a plane mirror.", 2, "M", "T"],
+    ["State one use of optical fibres and explain the principle behind it.", 3, "H", "T"],
     ["A ray of light strikes a plane mirror at an angle of incidence of 35°. State the angle of reflection.", 1, "E", "S"],
     ["Light travels from air into glass of refractive index 1.5. Calculate the speed of light in the glass. (Speed in air = 3.0 × 10⁸ m/s.)", 3, "H", "S"],
     ["A ray enters a medium with an angle of incidence of 40° and an angle of refraction of 25°. Calculate the refractive index.", 3, "H", "S"],
@@ -181,11 +209,12 @@ module.exports = {
     ["State the wave equation linking speed, frequency and wavelength.", 1, "E", "T"],
     ["Describe what happens to the speed, wavelength and frequency of a water wave as it moves into shallower water.", 3, "H", "T"],
     ["Define the amplitude of a wave.", 1, "E", "T"],
+    ["Describe what is meant by the diffraction of a wave.", 2, "M", "T"],
+    ["Explain the difference between a wave front and a ray.", 2, "M", "T"],
     ["A wave has a frequency of 12 Hz and a wavelength of 0.80 m. Calculate its speed.", 2, "E", "S"],
     ["A wave travels at 340 m/s and has a frequency of 170 Hz. Calculate its wavelength.", 2, "M", "S"],
     ["A wave has a period of 0.025 s. Calculate its frequency.", 2, "M", "S"],
     ["A water wave of wavelength 0.50 m has a speed of 2.0 m/s. Calculate its frequency.", 2, "M", "S"],
-    ["A wave has frequency 8.0 Hz and wavelength 2.5 m. Calculate its speed.", 2, "E", "S"],
     ["A wave of speed 6.0 m/s has a frequency of 15 Hz. Calculate its wavelength.", 2, "M", "S"]
   ],
   "15. The electromagnetic spectrum": [
@@ -197,8 +226,12 @@ module.exports = {
     ["State one use of microwaves.", 1, "E", "T"],
     ["Describe one use and one danger of gamma rays.", 2, "M", "T"],
     ["State one use of radio waves.", 1, "E", "T"],
-    ["Explain why microwaves are suitable for cooking food and for mobile phone communication.", 3, "H", "T"],
-    ["State the property that all electromagnetic waves have in common.", 1, "E", "T"]
+    ["Explain why microwaves are suitable for both cooking food and mobile phone communication.", 3, "H", "T"],
+    ["State the property that all electromagnetic waves have in common.", 1, "E", "T"],
+    ["Explain why ultraviolet radiation is more hazardous than visible light.", 2, "H", "T"],
+    ["State one use of visible light in communication.", 1, "E", "T"],
+    ["Describe how infrared radiation is used in remote controls.", 2, "M", "T"],
+    ["State why exposure to gamma radiation must be carefully controlled in hospitals.", 2, "M", "T"]
   ],
   "16. Magnetism": [
     ["State the difference between a permanent magnet and an electromagnet.", 2, "M", "T"],
@@ -210,6 +243,10 @@ module.exports = {
     ["Explain the difference between magnetically hard and magnetically soft materials.", 2, "M", "T"],
     ["Describe a method to magnetise a steel bar.", 2, "M", "T"],
     ["State one advantage of an electromagnet over a permanent magnet.", 1, "E", "T"],
-    ["Explain why the magnetic field is strongest at the poles of a magnet.", 2, "H", "T"]
+    ["Explain why the magnetic field is strongest at the poles of a magnet.", 2, "H", "T"],
+    ["Describe how to demagnetise a magnet.", 2, "M", "T"],
+    ["State two magnetic materials.", 1, "E", "T"],
+    ["Explain how an electromagnet is used in a device such as a scrapyard crane.", 3, "H", "T"],
+    ["Describe an experiment to show that an electric current produces a magnetic field.", 3, "H", "T"]
   ]
 };
