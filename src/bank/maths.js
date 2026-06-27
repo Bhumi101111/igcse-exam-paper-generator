@@ -1,0 +1,174 @@
+// src/bank/maths.js — Cambridge IGCSE Mathematics 0580, chapters 1–12, 14, 16.
+// Maths has no theory/sums split, so every entry is type "Q".
+// Each entry: [text, marks, difficulty(E|M|H), type(Q)].
+
+module.exports = {
+  "1. Review of number concepts": [
+    ["Write 84 as a product of its prime factors.", 2, "M", "Q"],
+    ["Evaluate 18 − 3 × 4 + 8 ÷ 2.", 2, "E", "Q"],
+    ["Find the highest common factor (HCF) of 72 and 108.", 2, "M", "Q"],
+    ["Find the lowest common multiple (LCM) of 8 and 12.", 2, "M", "Q"],
+    ["Round 4.0763 to two decimal places.", 1, "E", "Q"],
+    ["Estimate the value of 19.8 × 0.51 by rounding each number to one significant figure.", 2, "M", "Q"],
+    ["Work out −6 + 9 − 4.", 1, "E", "Q"],
+    ["Write 0.00056 in standard form.", 2, "M", "Q"],
+    ["Evaluate 3⁴ ÷ 3².", 2, "M", "Q"],
+    ["List all the factors of 24.", 2, "E", "Q"]
+  ],
+  "2. Making sense of algebra": [
+    ["Simplify 7a − 3b + 4a + 5b.", 2, "E", "Q"],
+    ["Expand and simplify 5(2x − 3) − 2(x + 4).", 3, "M", "Q"],
+    ["Substitute x = −2 and y = 5 into 3x² − 2y.", 2, "M", "Q"],
+    ["Simplify (m³ × m⁵) ÷ m².", 2, "M", "Q"],
+    ["Expand 3(2x + 5).", 1, "E", "Q"],
+    ["Simplify 4p × 3p².", 2, "M", "Q"],
+    ["Write an expression for the perimeter of a rectangle of length 2x and width x + 3.", 2, "M", "Q"],
+    ["Simplify 12xy ÷ 4x.", 2, "M", "Q"],
+    ["Expand and simplify (x + 4)(x − 3).", 2, "H", "Q"],
+    ["Substitute a = 3 into 2a² + 5.", 1, "E", "Q"]
+  ],
+  "3. Lines, angles and shapes": [
+    ["The angles in a triangle are 2x, 3x and 4x degrees. Find x.", 2, "M", "Q"],
+    ["Find the size of each interior angle of a regular hexagon.", 2, "M", "Q"],
+    ["Two parallel lines are cut by a transversal. One angle is 68°. State the size of its corresponding angle.", 1, "E", "Q"],
+    ["The exterior angle of a regular polygon is 30°. Find the number of sides.", 2, "M", "Q"],
+    ["Find the size of the missing angle in a triangle containing angles of 47° and 68°.", 1, "E", "Q"],
+    ["State the sum of the interior angles of a pentagon.", 2, "M", "Q"],
+    ["Two angles on a straight line are 115° and x°. Find x.", 1, "E", "Q"],
+    ["Find the size of each exterior angle of a regular octagon.", 2, "M", "Q"],
+    ["Angles around a point are 90°, 120°, 75° and x°. Find x.", 2, "M", "Q"],
+    ["Explain why the angles of a quadrilateral add up to 360°.", 2, "H", "Q"]
+  ],
+  "4. Collecting, organising and displaying data": [
+    ["The values 3, 4, 4, 5, 6, 6, 6, 8 are recorded. State the mode.", 1, "E", "Q"],
+    ["The frequencies for four groups are 5, 8, 11 and 6. Calculate the total frequency.", 1, "E", "Q"],
+    ["Explain why a sample of 10 students from one class may not represent a whole school.", 2, "M", "Q"],
+    ["A pie chart shows 4 categories. One category has 90 of 360 people. Calculate the angle for this category.", 2, "M", "Q"],
+    ["State a suitable type of chart for displaying the favourite sport of a class.", 1, "E", "Q"],
+    ["In a bar chart the bars have heights 5, 9, 7 and 3. Calculate the total frequency.", 1, "E", "Q"],
+    ["A frequency table has values 1, 2, 3 with frequencies 4, 6, 10. Calculate the total number of values.", 2, "M", "Q"],
+    ["Describe one advantage of using a pie chart to display data.", 2, "M", "Q"],
+    ["The angle for a category in a pie chart is 72° out of 360°. Calculate the fraction of the total it represents.", 2, "H", "Q"],
+    ["State the difference between discrete and continuous data.", 2, "M", "Q"]
+  ],
+  "5. Fractions, percentages and standard form": [
+    ["Calculate 3/4 + 5/8, giving your answer in its simplest form.", 2, "M", "Q"],
+    ["Increase 640 by 12%.", 2, "M", "Q"],
+    ["Write 0.0000725 in standard form.", 1, "M", "Q"],
+    ["Calculate (3.0 × 10⁴) × (2.0 × 10⁻³), giving your answer in standard form.", 2, "H", "Q"],
+    ["Find 35% of 240.", 2, "E", "Q"],
+    ["Write 7/20 as a percentage.", 1, "E", "Q"],
+    ["Decrease 80 by 15%.", 2, "M", "Q"],
+    ["Calculate 2/3 of 51.", 1, "E", "Q"],
+    ["A price of $50 increases by 8%. Calculate the new price.", 2, "M", "Q"],
+    ["Write 4.2 × 10⁵ as an ordinary number.", 1, "E", "Q"]
+  ],
+  "6. Equations, factors and formulae": [
+    ["Solve 5x − 7 = 3x + 9.", 2, "M", "Q"],
+    ["Factorise fully 6x² − 15x.", 2, "M", "Q"],
+    ["Make r the subject of A = πr².", 2, "H", "Q"],
+    ["Solve 4(2x − 3) = 20.", 2, "M", "Q"],
+    ["Factorise x² + 7x + 12.", 2, "M", "Q"],
+    ["Solve x + 5 = 12.", 1, "E", "Q"],
+    ["Solve x² − 9 = 0.", 2, "M", "Q"],
+    ["Make c the subject of the formula v = u + c.", 1, "E", "Q"],
+    ["Solve 3x − 4 = 11.", 1, "E", "Q"],
+    ["Factorise x² − 16.", 2, "H", "Q"]
+  ],
+  "7. Perimeter, area and volume": [
+    ["Calculate the area of a circle of radius 7 cm, giving your answer in terms of π.", 2, "M", "Q"],
+    ["A cuboid measures 8 cm by 5 cm by 3 cm. Calculate its volume.", 2, "E", "Q"],
+    ["A triangle has base 14 cm and perpendicular height 9 cm. Calculate its area.", 2, "E", "Q"],
+    ["A cylinder has radius 4 cm and height 10 cm. Calculate its volume in terms of π.", 3, "H", "Q"],
+    ["Calculate the circumference of a circle of radius 6 cm in terms of π.", 2, "M", "Q"],
+    ["Calculate the perimeter of a rectangle of length 12 cm and width 5 cm.", 1, "E", "Q"],
+    ["Calculate the area of a rectangle 14 cm by 8 cm.", 1, "E", "Q"],
+    ["A square has area 49 cm². Find the length of one side.", 2, "M", "Q"],
+    ["Calculate the volume of a cube of side 5 cm.", 2, "M", "Q"],
+    ["A circle has diameter 20 cm. Calculate its area in terms of π.", 2, "H", "Q"]
+  ],
+  "8. Introduction to probability": [
+    ["A fair spinner has eight equal sections numbered 1 to 8. Find the probability of spinning an even number.", 2, "E", "Q"],
+    ["The probability that a bus is late is 0.18. Find the probability that it is not late.", 1, "E", "Q"],
+    ["A bag contains 7 white and 5 black counters. One is taken at random. Find the probability it is black.", 2, "M", "Q"],
+    ["Two fair coins are tossed. Find the probability of obtaining two heads.", 2, "M", "Q"],
+    ["A bag contains 5 red, 3 blue and 2 green counters. Find the probability of choosing a blue counter.", 2, "E", "Q"],
+    ["A fair six-sided die is rolled. Find the probability of scoring more than 4.", 2, "M", "Q"],
+    ["The probability of rain is 0.30. Find the probability of no rain.", 1, "E", "Q"],
+    ["A bag has 4 red and 6 yellow balls. Find the probability of choosing a red ball.", 2, "E", "Q"],
+    ["Two fair dice are rolled. Find the probability of getting a total of 7.", 3, "H", "Q"],
+    ["A spinner has 10 equal sections, 3 shaded. Find the probability of landing on an unshaded section.", 2, "M", "Q"]
+  ],
+  "9. Sequences, surds and sets": [
+    ["Find the next two terms of the sequence 5, 9, 13, 17, …", 1, "E", "Q"],
+    ["Find an expression for the nth term of 4, 7, 10, 13, …", 2, "M", "Q"],
+    ["Simplify √50.", 2, "H", "Q"],
+    ["In a group of 30 students, 18 study French and 14 study Spanish; 5 study both. Find how many study neither.", 3, "H", "Q"],
+    ["Find the 10th term of the sequence with nth term 3n + 1.", 2, "M", "Q"],
+    ["Write down the first three terms of the sequence with nth term 2n − 1.", 2, "M", "Q"],
+    ["Simplify √8 + √2.", 3, "H", "Q"],
+    ["List the members of the set of even numbers between 1 and 11.", 1, "E", "Q"],
+    ["Find the next term of the sequence 2, 6, 18, 54, …", 2, "M", "Q"],
+    ["State whether √16 is rational or irrational, giving a reason.", 2, "M", "Q"]
+  ],
+  "10. Straight lines and quadratic equations": [
+    ["The points A(2, 5) and B(8, 17) lie on a straight line. Find its gradient.", 2, "M", "Q"],
+    ["Find the equation of the line with gradient 3 and y-intercept −4.", 2, "M", "Q"],
+    ["Solve x² + 5x + 6 = 0.", 2, "M", "Q"],
+    ["The line y = 2x + 1 passes through the point (4, y). Find y.", 1, "E", "Q"],
+    ["Find the gradient of the line joining (−1, 3) and (5, 15).", 2, "M", "Q"],
+    ["Write down the gradient and y-intercept of y = 5x − 2.", 1, "E", "Q"],
+    ["Solve x² − 7x + 10 = 0.", 2, "H", "Q"],
+    ["Find y when x = 3 for the line y = 4x − 5.", 1, "E", "Q"],
+    ["Find the equation of the line through (0, 2) with gradient −1.", 2, "M", "Q"],
+    ["Solve x² + 2x − 8 = 0.", 3, "H", "Q"]
+  ],
+  "11. Pythagoras' theorem and similar shapes": [
+    ["A right-angled triangle has hypotenuse 13 cm and one shorter side 5 cm. Find the third side.", 3, "M", "Q"],
+    ["A right-angled triangle has shorter sides 9 cm and 12 cm. Calculate the hypotenuse.", 2, "M", "Q"],
+    ["Two similar shapes have corresponding lengths 4 cm and 10 cm. Find the scale factor of enlargement.", 1, "E", "Q"],
+    ["A right-angled triangle has hypotenuse 17 cm and one shorter side 8 cm. Calculate the other shorter side.", 3, "H", "Q"],
+    ["Two similar triangles have scale factor 3. The smaller has area 8 cm². Find the area of the larger.", 2, "H", "Q"],
+    ["A right-angled triangle has shorter sides 6 cm and 8 cm. Calculate the hypotenuse.", 2, "E", "Q"],
+    ["A ladder of length 5 m leans against a wall with its base 3 m away. Find how far up the wall it reaches.", 3, "M", "Q"],
+    ["Two similar rectangles have widths 5 cm and 15 cm. Find the scale factor.", 1, "E", "Q"],
+    ["A right-angled triangle has legs 5 cm and 12 cm. Calculate the hypotenuse.", 2, "M", "Q"],
+    ["A square has diagonal 10 cm. Calculate the length of one side.", 3, "H", "Q"]
+  ],
+  "12. Averages and measures of spread": [
+    ["Find the mean of 6, 9, 11, 14 and 20.", 2, "E", "Q"],
+    ["Find the range of 18, 7, 13, 21, 9 and 16.", 1, "E", "Q"],
+    ["The mean of five numbers is 8. Find their total.", 1, "M", "Q"],
+    ["The values 2, 4, 6 and 8 have frequencies 1, 3, 4 and 2. Calculate the mean.", 3, "H", "Q"],
+    ["Find the median of 4, 8, 3, 11, 7, 9, 5.", 2, "M", "Q"],
+    ["Find the mode of 2, 3, 3, 5, 7, 3, 8.", 1, "E", "Q"],
+    ["Find the mean of 10, 20, 30 and 40.", 1, "E", "Q"],
+    ["The range of a data set is 14 and the smallest value is 7. Find the largest value.", 2, "M", "Q"],
+    ["Find the median of 12, 5, 9, 20, 14, 8.", 2, "H", "Q"],
+    ["Four numbers have a mean of 15. Three of them are 12, 18 and 14. Find the fourth.", 3, "H", "Q"]
+  ],
+  "14. Further solving of equations and inequalities": [
+    ["Solve the inequality 3x + 5 < 20.", 2, "M", "Q"],
+    ["Solve 2x² − 7x + 3 = 0.", 3, "H", "Q"],
+    ["Solve the simultaneous equations y = 2x + 1 and x + y = 10.", 3, "H", "Q"],
+    ["Rearrange v = u + at to make t the subject.", 2, "M", "Q"],
+    ["Solve the inequality 4x − 3 ≥ 9.", 2, "M", "Q"],
+    ["Solve the simultaneous equations x + y = 11 and x − y = 3.", 3, "M", "Q"],
+    ["Solve 2(x + 3) = 16.", 1, "E", "Q"],
+    ["Solve the inequality 5x < 35.", 1, "E", "Q"],
+    ["Solve x² − 5x + 6 = 0.", 2, "H", "Q"],
+    ["List the integer values of x that satisfy −2 < x ≤ 3.", 2, "M", "Q"]
+  ],
+  "16. Scatter diagrams and correlation": [
+    ["State the type of correlation expected between the age of a car and its resale value.", 1, "E", "Q"],
+    ["Explain why correlation does not always imply causation.", 2, "M", "Q"],
+    ["A line of best fit predicts y = 18 when x = 6. State the estimated value of y.", 1, "E", "Q"],
+    ["Describe the correlation shown when points lie close to an upward-sloping straight line.", 1, "E", "Q"],
+    ["State the type of correlation expected between hours of revision and test score.", 1, "E", "Q"],
+    ["Describe what a scatter diagram with no pattern of points indicates about correlation.", 2, "M", "Q"],
+    ["Explain how a line of best fit is used to estimate a value.", 2, "M", "Q"],
+    ["State the type of correlation between outside temperature and the amount of heating used.", 1, "E", "Q"],
+    ["Describe the strength and type of correlation when points lie exactly on a downward line.", 2, "H", "Q"],
+    ["Explain why a line of best fit should follow the trend of the points rather than join them.", 2, "H", "Q"]
+  ]
+};

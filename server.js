@@ -11,6 +11,7 @@ const { fetchBytes, extractPdfLinks } = require("./src/sources");
 const { classifyAll } = require("./src/classify");
 const { dedupe } = require("./src/dedupe");
 const { generate } = require("./src/generate");
+const { loadBankQuestions } = require("./src/bank");
 
 const PORT = Number(process.env.PORT || 4173);
 const REFERENCE_BASE = "https://pastpapers.co/caie/igcse";
@@ -121,15 +122,7 @@ app.post("/api/generate", upload.array("pdfs", MAX_PDFS), async (req, res) => {
 
     const { buffers, log } = await collectPdfs({ files: req.files, urls, referenceUrl });
 
-    if (!buffers.length) {
-      return res.status(422).json({
-        error: "No readable PDFs. Upload past-paper PDFs or paste direct PDF links — the reference index could not be crawled (likely Cloudflare-protected).",
-        sources: log,
-        referenceBase: REFERENCE_BASE
-      });
-    }
-
-    // Parse every PDF -> questions.
+    // Parse any provided PDFs -> questions (optional; the built-in bank is the default source).
     let raw = [];
     for (const { name, buffer } of buffers) {
       try {
@@ -144,7 +137,10 @@ app.post("/api/generate", upload.array("pdfs", MAX_PDFS), async (req, res) => {
       }
     }
 
-    const classified = classifyAll(subject, raw, chapters);
+    // Built-in bank (default) + any questions parsed from provided PDFs (combination).
+    const bankQuestions = loadBankQuestions(subject, chapters);
+    const pdfClassified = classifyAll(subject, raw, chapters);
+    const classified = [...bankQuestions, ...pdfClassified];
     const pool = dedupe(classified);
     const paper = generate(pool, { subject, totalMarks, split, difficulty });
 
@@ -153,6 +149,8 @@ app.post("/api/generate", upload.array("pdfs", MAX_PDFS), async (req, res) => {
       diagnostics: {
         sources: log,
         rawQuestions: raw.length,
+        pdfMatched: pdfClassified.length,
+        bankQuestions: bankQuestions.length,
         matchedChapters: classified.length,
         uniqueQuestions: pool.length
       },

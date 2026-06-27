@@ -1,0 +1,184 @@
+// src/bank/chemistry.js — Cambridge IGCSE Chemistry 0620, chapters 1–5 and 11–22.
+// Each entry: [text, marks, difficulty(E|M|H), type(T=theory|S=sums)].
+
+module.exports = {
+  "1. States of matter": [
+    ["Describe the arrangement and movement of the particles in a gas.", 3, "E", "T"],
+    ["Explain, in terms of particles, what happens when a solid melts.", 3, "M", "T"],
+    ["Explain why the temperature of a pure substance stays constant while it boils.", 2, "M", "T"],
+    ["State two differences between the particles in a liquid and in a gas.", 2, "M", "T"],
+    ["Explain why increasing the temperature increases the rate of diffusion of a gas.", 3, "H", "T"],
+    ["Define the term diffusion.", 1, "E", "T"],
+    ["Describe how the particle model explains the compression of a gas.", 2, "M", "T"],
+    ["Explain why a smell spreads across a room over time.", 2, "M", "T"]
+  ],
+  "2. Atomic structure": [
+    ["State the relative charge and relative mass of a proton, a neutron and an electron.", 3, "M", "T"],
+    ["Define the term isotope.", 2, "M", "T"],
+    ["Explain why isotopes of the same element have identical chemical properties.", 2, "M", "T"],
+    ["Describe the structure of an atom in terms of the nucleus and electron shells.", 3, "E", "T"],
+    ["State the electronic configuration of a chlorine atom (proton number 17).", 2, "M", "T"],
+    ["Explain why an atom has no overall electric charge.", 2, "M", "T"],
+    ["An atom has proton number 19 and nucleon number 39. Calculate the number of neutrons.", 2, "E", "S"],
+    ["A magnesium ion is Mg²⁺. Magnesium has proton number 12. Calculate the number of electrons in the ion.", 2, "M", "S"],
+    ["An atom has 17 protons and 20 neutrons. State its nucleon number.", 1, "E", "S"],
+    ["A sample of chlorine contains 75% ³⁵Cl and 25% ³⁷Cl. Calculate the relative atomic mass.", 3, "H", "S"]
+  ],
+  "3. Chemical bonding": [
+    ["Describe how an ionic bond is formed between a metal and a non-metal.", 3, "M", "T"],
+    ["Describe how a covalent bond is formed between two non-metal atoms.", 2, "M", "T"],
+    ["Explain why ionic compounds conduct electricity when molten but not when solid.", 3, "M", "T"],
+    ["Explain why graphite can conduct electricity but diamond cannot.", 3, "H", "T"],
+    ["Describe metallic bonding in a metal.", 3, "M", "T"],
+    ["Explain why ionic compounds have high melting points.", 2, "M", "T"],
+    ["State the type of bonding present in sodium chloride.", 1, "E", "T"],
+    ["Explain why simple molecular substances have low melting points.", 2, "M", "T"]
+  ],
+  "4. Chemical formulae and equations": [
+    ["Explain why a chemical equation must be balanced.", 2, "M", "T"],
+    ["State the meaning of the state symbols (s), (l), (g) and (aq).", 2, "E", "T"],
+    ["Write a word equation for the reaction between hydrochloric acid and sodium hydroxide.", 2, "E", "T"],
+    ["Write a balanced symbol equation for the complete combustion of methane.", 2, "H", "T"],
+    ["Calculate the relative formula mass of CaCO₃. [Ar: Ca = 40, C = 12, O = 16]", 2, "E", "S"],
+    ["Calculate the relative formula mass of H₂SO₄. [Ar: H = 1, S = 32, O = 16]", 2, "M", "S"],
+    ["Calculate the relative formula mass of Mg(NO₃)₂. [Ar: Mg = 24, N = 14, O = 16]", 3, "H", "S"],
+    ["A molecule of ethanol is C₂H₅OH. Calculate the total number of atoms in one molecule.", 2, "E", "S"],
+    ["Calculate the relative formula mass of CO₂. [Ar: C = 12, O = 16]", 1, "E", "S"],
+    ["In the equation 2H₂ + O₂ → 2H₂O, state the ratio of moles of hydrogen to moles of water.", 1, "M", "S"]
+  ],
+  "5. Chemical calculations": [
+    ["Define the term mole.", 2, "M", "T"],
+    ["State the equation linking concentration, amount in moles and volume in dm³.", 2, "M", "T"],
+    ["Describe how to convert a volume measured in cm³ into dm³.", 1, "E", "T"],
+    ["State the volume occupied by one mole of any gas at room temperature and pressure.", 1, "E", "T"],
+    ["Calculate the number of moles in 24 g of magnesium. [Ar: Mg = 24]", 2, "E", "S"],
+    ["Calculate the mass of 0.25 mol of CaCO₃. [Mr = 100]", 2, "E", "S"],
+    ["Calculate the concentration in mol/dm³ when 0.10 mol of NaOH is dissolved in 250 cm³ of solution.", 3, "M", "S"],
+    ["Calculate the volume occupied by 0.50 mol of a gas at r.t.p.", 2, "M", "S"],
+    ["Calculate the number of moles in 9.0 g of water. [Mr = 18]", 2, "M", "S"],
+    ["Calculate the mass of 2.0 mol of sodium chloride. [Mr = 58.5]", 2, "M", "S"],
+    ["25.0 cm³ of 0.10 mol/dm³ HCl is neutralised. Calculate the number of moles of HCl used.", 3, "H", "S"]
+  ],
+  "11. Acids and bases": [
+    ["Define an acid in terms of hydrogen ions.", 2, "M", "T"],
+    ["Define an alkali.", 2, "M", "T"],
+    ["State the colour of universal indicator in a strongly acidic solution and in a neutral solution.", 2, "E", "T"],
+    ["Describe a neutralisation reaction and name the products formed.", 2, "M", "T"],
+    ["Explain the difference between a strong acid and a weak acid.", 3, "H", "T"],
+    ["Name the gas produced when a dilute acid reacts with a metal, and state the test for it.", 2, "E", "T"],
+    ["A solution has a hydrogen ion concentration giving pH 3. After dilution by a factor of ten, state the new pH.", 1, "M", "S"],
+    ["Calculate the volume of 0.20 mol/dm³ NaOH needed to neutralise 25.0 cm³ of 0.10 mol/dm³ HCl.", 3, "H", "S"],
+    ["A solution of pH 1 is diluted one hundred times. State the new pH.", 2, "M", "S"],
+    ["20.0 cm³ of acid is neutralised by 25.0 cm³ of 0.10 mol/dm³ alkali. Calculate the moles of alkali used.", 3, "H", "S"]
+  ],
+  "12. Preparation of salts": [
+    ["Describe how to prepare dry crystals of a soluble salt from an acid and an insoluble base.", 4, "H", "T"],
+    ["Explain why excess insoluble base is added when preparing a soluble salt.", 2, "M", "T"],
+    ["Describe how an insoluble salt is prepared by precipitation.", 3, "M", "T"],
+    ["Explain why salt crystals are dried by patting between filter papers rather than by strong heating.", 2, "M", "T"],
+    ["State how crystals are obtained from a salt solution.", 2, "E", "T"],
+    ["Name the products formed when a metal carbonate reacts with a dilute acid.", 2, "E", "T"],
+    ["Describe how filtration is used during the preparation of a soluble salt.", 2, "M", "T"],
+    ["State why distilled water rather than tap water is used when preparing a pure salt.", 1, "E", "T"]
+  ],
+  "13. The Periodic Table": [
+    ["State how the elements are arranged in the modern Periodic Table.", 2, "E", "T"],
+    ["Describe the trend in reactivity going down Group I.", 3, "M", "T"],
+    ["Describe two physical properties of the transition elements.", 2, "M", "T"],
+    ["Explain why the noble gases are unreactive.", 2, "M", "T"],
+    ["Explain why elements in the same group have similar chemical properties.", 2, "M", "T"],
+    ["Describe the trend in colour and physical state of the Group VII elements down the group.", 3, "H", "T"],
+    ["State what is meant by a group and a period in the Periodic Table.", 2, "E", "T"],
+    ["Predict the products formed when chlorine is added to potassium bromide solution, and explain.", 3, "H", "T"]
+  ],
+  "14. Metallic elements and alloys": [
+    ["State three typical physical properties of metals.", 3, "E", "T"],
+    ["Explain why alloys are usually harder than the pure metals they are made from.", 3, "M", "T"],
+    ["Explain why metals are good conductors of electricity.", 2, "M", "T"],
+    ["State one use of aluminium that depends on its low density.", 1, "E", "T"],
+    ["Explain why copper is used for electrical wiring.", 2, "M", "T"],
+    ["Describe the structure of a metal in terms of ions and delocalised electrons.", 3, "M", "T"],
+    ["Explain why metals can be bent and shaped without breaking.", 2, "H", "T"],
+    ["State one use of an alloy and the property that makes it suitable.", 2, "E", "T"]
+  ],
+  "15. Reactivity of metals": [
+    ["Describe the observations when a small piece of sodium is added to cold water.", 3, "M", "T"],
+    ["Explain how a displacement reaction can be used to compare the reactivity of two metals.", 3, "M", "T"],
+    ["Place these metals in order of decreasing reactivity: copper, magnesium, zinc, iron.", 2, "E", "T"],
+    ["Explain why gold is found as the uncombined element in the Earth's crust.", 2, "M", "T"],
+    ["Describe what is observed when magnesium reacts with dilute hydrochloric acid.", 2, "E", "T"],
+    ["Explain why a more reactive metal can displace a less reactive metal from its salt solution.", 2, "M", "T"],
+    ["Describe the difference in reactivity between magnesium and copper with dilute acid.", 2, "M", "T"],
+    ["Predict whether zinc will displace copper from copper(II) sulfate solution and explain.", 3, "H", "T"]
+  ],
+  "16. Extraction and corrosion of metals": [
+    ["Explain why aluminium is extracted by electrolysis rather than by reduction with carbon.", 3, "H", "T"],
+    ["State the two conditions necessary for iron to rust.", 2, "E", "T"],
+    ["Describe how galvanising protects iron from rusting.", 3, "M", "T"],
+    ["Describe the role of carbon in the extraction of iron in the blast furnace.", 3, "M", "T"],
+    ["Explain why a metal high in the reactivity series is more difficult to extract from its ore.", 2, "M", "T"],
+    ["A 200 g sample of iron ore contains 70% iron(III) oxide. Calculate the mass of iron(III) oxide.", 2, "E", "S"],
+    ["Calculate the maximum mass of iron obtainable from 160 g of Fe₂O₃. [Mr Fe₂O₃ = 160, Ar Fe = 56]", 3, "H", "S"],
+    ["An iron bar of mass 50 g loses 0.50 g due to rusting. Calculate the percentage loss in mass.", 2, "M", "S"]
+  ],
+  "17. Chemistry of our environment": [
+    ["State two gases that contribute to acid rain.", 2, "E", "T"],
+    ["Explain how the greenhouse effect leads to global warming.", 3, "M", "T"],
+    ["State one source and one harmful effect of carbon monoxide.", 2, "M", "T"],
+    ["Describe one method used to reduce sulfur dioxide emissions from power stations.", 2, "M", "T"],
+    ["Explain why treating water is important before it is supplied to homes.", 2, "M", "T"],
+    ["State two greenhouse gases and one human activity that increases each.", 3, "H", "T"],
+    ["Describe how acid rain damages the environment.", 2, "M", "T"],
+    ["State one way that individuals can reduce their contribution to climate change.", 1, "E", "T"]
+  ],
+  "18. Introduction to organic chemistry": [
+    ["Define the term hydrocarbon.", 2, "E", "T"],
+    ["State the general formula of the alkane homologous series.", 1, "M", "T"],
+    ["State the general formula of the alkene homologous series.", 1, "M", "T"],
+    ["Explain the meaning of the term homologous series.", 2, "M", "T"],
+    ["Describe the test that distinguishes an alkane from an alkene, including the result.", 3, "M", "T"],
+    ["Explain why members of a homologous series have similar chemical properties.", 2, "H", "T"],
+    ["State the difference between a saturated and an unsaturated hydrocarbon.", 2, "M", "T"],
+    ["Name the first three members of the alkane series.", 2, "E", "T"]
+  ],
+  "19. Reactions of organic compounds": [
+    ["Write a word equation for the complete combustion of ethanol.", 2, "M", "T"],
+    ["State the conditions and products for the fermentation of glucose.", 3, "M", "T"],
+    ["Describe the reaction of ethene with bromine water, including the colour change.", 2, "M", "T"],
+    ["State the conditions required for the catalytic cracking of long-chain hydrocarbons.", 2, "M", "T"],
+    ["Explain why cracking is carried out in the petrochemical industry.", 2, "H", "T"],
+    ["Calculate the mass of carbon dioxide produced when 4.6 g of ethanol (Mr = 46) is completely combusted. [Mr CO₂ = 44]", 4, "H", "S"],
+    ["State the volume at r.t.p. of 0.50 mol of carbon dioxide.", 2, "M", "S"],
+    ["A fermentation produces 0.20 mol of ethanol. Calculate the mass of ethanol formed. [Mr = 46]", 2, "M", "S"]
+  ],
+  "20. Petrochemicals and polymers": [
+    ["Define addition polymerisation.", 2, "M", "T"],
+    ["Describe the difference between a monomer and a polymer.", 2, "E", "T"],
+    ["State two environmental problems caused by disposing of plastics in landfill.", 2, "M", "T"],
+    ["State one advantage of recycling plastics.", 1, "E", "T"],
+    ["Explain how poly(ethene) is formed from ethene monomers.", 3, "M", "T"],
+    ["Name two useful fractions obtained from the fractional distillation of crude oil and a use of each.", 3, "H", "T"],
+    ["Explain why many plastics are described as non-biodegradable.", 2, "M", "T"],
+    ["State one problem caused by burning plastic waste.", 1, "E", "T"]
+  ],
+  "21. Experimental design and separation techniques": [
+    ["Describe how filtration separates an insoluble solid from a liquid.", 3, "M", "T"],
+    ["Describe how simple distillation can be used to obtain pure water from salt water.", 3, "M", "T"],
+    ["Describe how fractional distillation separates a mixture of two liquids with different boiling points.", 4, "H", "T"],
+    ["Explain how paper chromatography separates a mixture of coloured dyes.", 3, "M", "T"],
+    ["State what is meant by an Rf value in chromatography.", 2, "M", "T"],
+    ["Describe how to obtain pure salt crystals from a salt solution.", 2, "E", "T"],
+    ["State one way to check that a sample is a pure substance using melting point.", 2, "M", "T"],
+    ["Explain why a pencil line, not ink, is used to mark the start line in chromatography.", 2, "H", "T"]
+  ],
+  "22. Chemical analysis": [
+    ["Describe the test for hydrogen gas and the positive result.", 2, "E", "T"],
+    ["Describe the test for oxygen gas and the positive result.", 2, "E", "T"],
+    ["Describe the test for carbon dioxide and the positive result.", 2, "E", "T"],
+    ["Describe the test for ammonia gas and the positive result.", 2, "M", "T"],
+    ["Describe the flame test colours for sodium ions and potassium ions.", 2, "M", "T"],
+    ["Describe how to test for the presence of water using anhydrous copper(II) sulfate.", 2, "M", "T"],
+    ["Describe the test for chloride ions using silver nitrate solution.", 3, "H", "T"],
+    ["State the observation when limewater is bubbled with carbon dioxide.", 1, "E", "T"]
+  ]
+};

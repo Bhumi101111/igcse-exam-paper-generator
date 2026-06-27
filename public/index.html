@@ -9,7 +9,7 @@
 <body>
   <header class="topbar">
     <h1>IGCSE Paper Generator</h1>
-    <p>Builds Physics · Chemistry · Mathematics papers live from past-paper PDFs.</p>
+    <p>Builds Physics · Chemistry · Mathematics papers from a built-in question bank (PMT/CAIE style).</p>
   </header>
 
   <main class="layout">
@@ -54,15 +54,16 @@
       </section>
 
       <section class="field">
-        <label class="field-label">Source past papers</label>
+        <label class="field-label">Source <span class="hint">(optional)</span></label>
         <p class="hint">
-          Reference: <a id="reference-link" href="https://pastpapers.co/caie/igcse" target="_blank" rel="noopener">pastpapers.co/caie/igcse</a>.
-          That site is Cloudflare-protected, so the server usually can't crawl it — the reliable way is to
-          <strong>download question-paper PDFs and upload them</strong> (or paste direct PDF links).
+          Papers are built from the <strong>built-in question bank</strong> by default — just pick chapters and
+          generate. To mix in real past-paper questions, upload PDFs or paste direct PDF links and they'll be
+          combined with the bank. (Reference: <a id="reference-link" href="https://pastpapers.co/caie/igcse" target="_blank" rel="noopener">pastpapers.co/caie/igcse</a> —
+          its index can't be crawled by the server, so download PDFs and upload them.)
         </p>
-        <label class="sub-label" for="pdf-files">Upload PDF question papers</label>
+        <label class="sub-label" for="pdf-files">Upload PDF question papers (optional)</label>
         <input id="pdf-files" type="file" accept="application/pdf" multiple />
-        <label class="sub-label" for="pdf-urls">…or paste direct PDF links (one per line)</label>
+        <label class="sub-label" for="pdf-urls">…or paste direct PDF links, one per line (optional)</label>
         <textarea id="pdf-urls" rows="3" placeholder="https://example.com/0625_s23_qp_22.pdf"></textarea>
         <label class="sub-label" for="reference-url">…or an index/reference URL to crawl for PDF links (optional)</label>
         <input id="reference-url" type="url" placeholder="https://…" />
