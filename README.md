@@ -9,14 +9,22 @@ An Express app that builds **Cambridge IGCSE** exam papers **live from past-pape
 ## What it does
 
 - Pick a **subject** and any **combination of chapters**.
-- Set a **total mark** count.
-- For **Physics & Chemistry**, split the marks into **Theory** and **Sums** (numerical).
-  Some chapters have no sums — those simply contribute theory, and the Sums section
-  draws numerical questions from whichever selected chapters provide them.
+- Choose a **paper type** that follows the Cambridge IGCSE pattern:
+  - **Mixed (Theory + Sums)** — structured paper split into Theory and numerical Sums.
+  - **Multiple Choice (MCQ)** — Paper 1/2 style, every question 1 mark with four
+    options (A–D); an **answer key** is printed at the end.
+  - **Theory only** — structured written questions with no MCQs or numerical section.
+- Set a **total mark** count (for MCQ this is the **number of questions**).
+- For the **Mixed** type on Physics/Chemistry, split the marks into **Theory** and
+  **Sums** (numerical). Some chapters have no sums — those simply contribute theory.
 - Choose a **difficulty**: **Easy / Medium / Hard**.
-- The server reads the supplied past-paper **PDFs**, extracts question parts with their
-  marks, matches them to the selected chapters, classifies theory vs sums and difficulty,
-  removes duplicates, and assembles a paper to the requested marks.
+- **Diagrams**: questions can include figures (rulers, distance–time / speed–time
+  graphs, moments, springs, ray diagrams, waves, magnetic fields, atom shells,
+  fractional distillation, right-angled triangles, parallel lines, pie charts).
+  Figures are inline SVG so they render in the preview and in the printed PDF.
+- The server reads the supplied past-paper **PDFs** (optional), extracts question parts
+  with their marks, matches them to the selected chapters, classifies theory vs sums and
+  difficulty, removes duplicates, and assembles a paper to the requested marks.
 
 ### No duplicates
 Two questions with the **same wording that differ only in their numbers** are treated as
@@ -62,6 +70,9 @@ src/sources.js       Fetch PDF/HTML, harvest PDF links (Cloudflare-aware)
 src/extract.js       PDF text -> question parts with marks
 src/classify.js      Chapter / Theory-vs-Sums / difficulty classification
 src/dedupe.js        Remove number-only duplicate questions
-src/generate.js      Assemble paper to total marks + split + difficulty
+src/generate.js      Assemble paper to total marks + split + difficulty + paper type
+src/bank/index.js    Bank loaders (theory/sums + MCQ), entry normalisation
+src/bank/mcq.js      Multiple-choice question bank (options + answers + diagrams)
+src/bank/diagrams.js Reusable inline SVG figures
 public/              Frontend (form + preview, print to PDF)
 ```

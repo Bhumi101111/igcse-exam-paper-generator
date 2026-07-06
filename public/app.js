@@ -39,11 +39,20 @@ function selectSubject(subject) {
   state.split = subject.split;
   state.chapters = subject.chapters;
   state.selected = new Set();
-  $("split-row").classList.toggle("hidden", !subject.split);
+  updatePaperType();
   renderSubjects();
   renderChapters();
   renderSelected();
   validateSplit();
+}
+
+// The theory/sums split only applies to the "mixed" paper type on split
+// subjects. MCQ and theory-only papers hide the split and relabel the marks.
+function updatePaperType() {
+  const paperType = $("paper-type").value;
+  const showSplit = paperType === "mixed" && state.subject && state.subject.split;
+  $("split-row").classList.toggle("hidden", !showSplit);
+  $("total-marks-label").textContent = paperType === "mcq" ? "Number of questions" : "Total marks";
 }
 
 function renderChapters() {
@@ -76,7 +85,7 @@ function renderSelected() {
 }
 
 function validateSplit() {
-  if (!state.split) { $("split-error").textContent = ""; return true; }
+  if (!state.split || $("paper-type").value !== "mixed") { $("split-error").textContent = ""; return true; }
   const total = Number($("total-marks").value) || 0;
   const sum = (Number($("theory-marks").value) || 0) + (Number($("sums-marks").value) || 0);
   const ok = sum === total;
@@ -86,6 +95,7 @@ function validateSplit() {
 
 function wireEvents() {
   $("chapter-search").oninput = renderChapters;
+  $("paper-type").onchange = () => { updatePaperType(); validateSplit(); };
   $("total-marks").oninput = validateSplit;
   $("theory-marks").oninput = validateSplit;
   $("sums-marks").oninput = validateSplit;
@@ -98,12 +108,14 @@ async function onGenerate(e) {
   if (!state.selected.size) { setStatus("Select at least one chapter.", true); return; }
   if (!validateSplit()) { setStatus("Fix the theory/sums split.", true); return; }
 
+  const paperType = $("paper-type").value;
   const fd = new FormData();
   fd.append("subject", state.subject.name);
   fd.append("chapters", JSON.stringify([...state.selected]));
   fd.append("totalMarks", $("total-marks").value);
   fd.append("difficulty", $("difficulty").value);
-  if (state.split) {
+  fd.append("paperType", paperType);
+  if (state.split && paperType === "mixed") {
     fd.append("theory", $("theory-marks").value);
     fd.append("sums", $("sums-marks").value);
   }
@@ -157,29 +169,56 @@ function renderDiagnostics(diag, paper) {
 
 function renderPaper(paper) {
   const chapters = [...state.selected].join(" · ");
+  const typeLabel = paper.paperType === "mcq" ? "Multiple Choice"
+    : paper.paperType === "theory" ? "Theory" : "Theory + Sums";
   let html = `<h2>${state.subject.name} — Chapter Assessment</h2>
     <div class="paper-meta">
       <span>Cambridge IGCSE ${state.subject.name} · ${state.subject.code}</span>
+      <span>${escapeHtml(typeLabel)} paper</span>
       <span>Total: ${paper.totalMarks} marks</span>
       <span>Difficulty: ${paper.difficulty}</span>
     </div>
     <div class="paper-meta"><span>${escapeHtml(chapters)}</span></div>`;
 
+  if (paper.paperType === "mcq") {
+    html += `<p class="paper-instruction">Answer <strong>all</strong> questions. For each question choose the <strong>one</strong> correct answer (A, B, C or D).</p>`;
+  }
+
+  const answerKey = [];
   for (const section of paper.sections) {
     if (!section.questions.length) continue;
-    html += `<div class="section-head"><span>${section.type}</span><span>${section.marks} marks</span></div>`;
+    html += `<div class="section-head"><span>${escapeHtml(section.type)}</span><span>${section.marks} marks</span></div>`;
     for (const q of section.questions) {
       html += `<div class="q">
         <div class="qn">${q.n}.</div>
-        <div class="qbody">${escapeHtml(q.text)}</div>
+        <div class="qbody">
+          <div class="qtext">${escapeHtml(q.text)}</div>
+          ${q.diagram ? `<div class="qfigure">${q.diagram}</div>` : ""}
+          ${renderOptions(q)}
+        </div>
         <div class="qmarks">[${q.marks}]</div>
       </div>`;
+      if (Array.isArray(q.options) && typeof q.answer === "number") {
+        answerKey.push(`${q.n}: ${String.fromCharCode(65 + q.answer)}`);
+      }
     }
   }
   if (!paper.sections.some(s => s.questions.length)) {
-    html += `<p class="placeholder">No questions matched the selected chapters in the provided PDFs. Try more chapters or different past papers.</p>`;
+    html += `<p class="placeholder">No questions matched the selected chapters. Try more chapters or a different paper type.</p>`;
+  }
+  if (answerKey.length) {
+    html += `<div class="answer-key"><div class="section-head"><span>Answer key</span></div>
+      <p>${answerKey.join(" · ")}</p></div>`;
   }
   $("paper").innerHTML = html;
+}
+
+function renderOptions(q) {
+  if (!Array.isArray(q.options) || !q.options.length) return "";
+  const items = q.options.map((opt, i) =>
+    `<li><span class="opt-letter">${String.fromCharCode(65 + i)}</span> ${escapeHtml(opt)}</li>`
+  ).join("");
+  return `<ol class="qoptions">${items}</ol>`;
 }
 
 function shorten(s) { return s.length > 70 ? s.slice(0, 67) + "…" : s; }

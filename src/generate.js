@@ -70,11 +70,25 @@ function fillSection(items, target, used, preferredDifficulty) {
 
 function generate(pool, options) {
   const { subject, totalMarks, split, difficulty } = options;
+  // paperType: "mixed" (default) | "mcq" (multiple choice only) | "theory" (theory only)
+  const paperType = options.paperType || "mixed";
   const meta = SUBJECTS[subject];
   const used = new Set();
   const sections = [];
 
-  if (meta && meta.split) {
+  if (paperType === "mcq") {
+    // IGCSE multiple-choice paper: every question is 1 mark, so the target
+    // mark count equals the number of questions.
+    const mcqPool = pool.filter(q => q.type === "MCQ");
+    const mcq = fillSection(mcqPool, totalMarks, used, difficulty);
+    sections.push({ type: "Multiple Choice", target: totalMarks, marks: mcq.marks, questions: mcq.questions });
+  } else if (paperType === "theory") {
+    // Theory-only paper: structured written questions, no numerical "sums"
+    // section and no multiple choice.
+    const theoryPool = pool.filter(q => q.type === "Theory" || q.type === "Questions");
+    const theory = fillSection(theoryPool, totalMarks, used, difficulty);
+    sections.push({ type: "Theory", target: totalMarks, marks: theory.marks, questions: theory.questions });
+  } else if (meta && meta.split) {
     const theoryWant = Math.max(0, (split && split.theory) || 0);
     const sumsWant = Math.max(0, (split && split.sums) || 0);
     const theoryPool = pool.filter(q => q.type === "Theory");
@@ -99,7 +113,10 @@ function generate(pool, options) {
       marks: q.marks,
       chapter: q.chapter,
       difficulty: q.difficulty,
-      type: q.type
+      type: q.type,
+      ...(q.diagram ? { diagram: q.diagram } : {}),
+      ...(Array.isArray(q.options) ? { options: q.options } : {}),
+      ...(typeof q.answer === "number" ? { answer: q.answer } : {})
     }));
   }
 
@@ -112,7 +129,7 @@ function generate(pool, options) {
     }
   }
 
-  return { subject, totalMarks, difficulty, sections, builtMarks, shortfall, notes, poolSize: pool.length };
+  return { subject, totalMarks, difficulty, paperType, sections, builtMarks, shortfall, notes, poolSize: pool.length };
 }
 
 module.exports = { generate };

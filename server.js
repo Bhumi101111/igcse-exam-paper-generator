@@ -11,7 +11,7 @@ const { fetchBytes, extractPdfLinks } = require("./src/sources");
 const { classifyAll } = require("./src/classify");
 const { dedupe } = require("./src/dedupe");
 const { generate } = require("./src/generate");
-const { loadBankQuestions } = require("./src/bank");
+const { loadBankQuestions, loadMcqQuestions } = require("./src/bank");
 
 const PORT = Number(process.env.PORT || 4173);
 const REFERENCE_BASE = "https://pastpapers.co/caie/igcse";
@@ -106,8 +106,12 @@ app.post("/api/generate", upload.array("pdfs", MAX_PDFS), async (req, res) => {
     const totalMarks = Math.max(1, Number(req.body.totalMarks) || 0);
     const difficulty = ["Easy", "Medium", "Hard"].includes(req.body.difficulty) ? req.body.difficulty : "Medium";
 
+    // Paper type: "mixed" (theory + sums), "mcq" (multiple choice), "theory".
+    const paperType = ["mixed", "mcq", "theory"].includes(req.body.paperType) ? req.body.paperType : "mixed";
+
     let split = null;
-    if (SUBJECTS[subject].split) {
+    // Theory/sums split only applies to the "mixed" paper type on split subjects.
+    if (paperType === "mixed" && SUBJECTS[subject].split) {
       const theory = Math.max(0, Number(req.body.theory) || 0);
       const sums = Math.max(0, Number(req.body.sums) || 0);
       if (theory + sums !== totalMarks) {
@@ -138,11 +142,15 @@ app.post("/api/generate", upload.array("pdfs", MAX_PDFS), async (req, res) => {
     }
 
     // Built-in bank (default) + any questions parsed from provided PDFs (combination).
-    const bankQuestions = loadBankQuestions(subject, chapters);
-    const pdfClassified = classifyAll(subject, raw, chapters);
+    // MCQ papers draw from the dedicated multiple-choice bank; theory/mixed
+    // papers draw from the structured question bank.
+    const bankQuestions = paperType === "mcq"
+      ? loadMcqQuestions(subject, chapters)
+      : loadBankQuestions(subject, chapters);
+    const pdfClassified = paperType === "mcq" ? [] : classifyAll(subject, raw, chapters);
     const classified = [...bankQuestions, ...pdfClassified];
     const pool = dedupe(classified);
-    const paper = generate(pool, { subject, totalMarks, split, difficulty });
+    const paper = generate(pool, { subject, totalMarks, split, difficulty, paperType });
 
     res.json({
       paper,

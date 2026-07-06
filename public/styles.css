@@ -117,12 +117,25 @@ button.ghost { border: 1px solid var(--border); background: #fff; border-radius:
 .q { display: flex; gap: 0.6rem; padding: 0.55rem 0; border-bottom: 1px dashed var(--border); }
 .q .qn { font-weight: 700; min-width: 1.6rem; }
 .q .qbody { flex: 1; }
+.q .qtext { }
 .q .qmeta { font-size: 0.72rem; color: var(--muted); margin-top: 0.2rem; }
 .q .qmarks { font-weight: 600; white-space: nowrap; }
+
+.paper .paper-instruction { font-size: 0.85rem; margin: 0.4rem 0 0.8rem; }
+.q .qfigure { margin: 0.5rem 0; }
+.q .qfigure svg { max-width: 100%; height: auto; border: 1px solid var(--border); background: #fff; }
+.q .qoptions { list-style: none; margin: 0.4rem 0 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0.15rem 1.2rem; }
+.q .qoptions li { font-size: 0.9rem; }
+.q .qoptions .opt-letter { font-weight: 700; margin-right: 0.35rem; }
+.answer-key { margin-top: 1.4rem; font-size: 0.85rem; }
+.answer-key p { line-height: 1.6; }
 
 @media print {
   .topbar, #builder, .preview-actions, .diagnostics { display: none !important; }
   .layout { display: block; padding: 0; }
   .panel.preview, .paper { border: none; border-radius: 0; padding: 0; }
   body { background: #fff; }
+  .q { break-inside: avoid; }
+  .q .qoptions { grid-template-columns: 1fr 1fr; }
+  .q .qfigure svg { border: 1px solid #000; }
 }
