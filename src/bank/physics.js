@@ -5,6 +5,7 @@
 
 module.exports = {
   "1. Making measurements": [
+    { text: "The diagram shows a metal rod placed against a centimetre scale. State the length of the rod and name an instrument that would measure it more precisely.", marks: 2, d: "M", t: "T", diagram: "rulerMeasurement" },
     ["State the SI unit of length and the SI unit of mass.", 1, "E", "T"],
     ["Describe how to measure the thickness of a single sheet of paper accurately using a ruler.", 3, "M", "T"],
     ["Explain why timing 20 oscillations of a pendulum gives a more accurate value for the period than timing one.", 3, "M", "T"],
@@ -23,6 +24,8 @@ module.exports = {
     ["A cube of side 2.0 cm has a mass of 64 g. Calculate its density.", 3, "M", "S"]
   ],
   "2. Describing motion": [
+    { text: "The distance\u2013time graph shows the motion of a cyclist. Describe the motion represented by each part of the graph.", marks: 3, d: "M", t: "T", diagram: "distanceTimeGraph" },
+    { text: "The speed\u2013time graph shows an object accelerating uniformly from rest. Describe how to find the distance travelled from the graph.", marks: 2, d: "M", t: "T", diagram: "speedTimeGraph" },
     ["State the difference between speed and velocity.", 2, "E", "T"],
     ["Describe the motion shown by a horizontal line on a distance–time graph.", 1, "E", "T"],
     ["Explain how the gradient of a distance–time graph represents speed.", 2, "M", "T"],
@@ -57,6 +60,7 @@ module.exports = {
     ["A 0.15 kg ball is kicked and gains a velocity of 20 m/s in 0.02 s. Calculate the force applied.", 3, "H", "S"]
   ],
   "4. Turning effects": [
+    { text: "The diagram shows a beam balanced on a pivot. A weight W1 = 300 N acts at d1 = 1.2 m. If d2 = 1.5 m, calculate the weight W2 needed to balance the beam.", marks: 3, d: "M", t: "S", diagram: "seesawMoments" },
     ["State what is meant by the moment of a force.", 2, "E", "T"],
     ["State the principle of moments.", 2, "M", "T"],
     ["Explain why a door handle is placed as far as possible from the hinges.", 2, "M", "T"],
@@ -72,6 +76,7 @@ module.exports = {
     ["Two children balance a see-saw. One of weight 250 N sits 2.0 m from the pivot. Calculate the moment she produces.", 2, "M", "S"]
   ],
   "5. Forces and matter": [
+    { text: "The diagram shows a spring stretched by a load. Describe how you would use this apparatus to investigate how the extension of the spring depends on the load.", marks: 4, d: "H", t: "T", diagram: "springLoad" },
     ["State Hooke's law.", 2, "E", "T"],
     ["Distinguish between elastic and plastic deformation.", 2, "M", "T"],
     ["Define pressure and state its SI unit.", 2, "E", "T"],
@@ -192,6 +197,7 @@ module.exports = {
     ["State why a loud sound can damage hearing.", 1, "E", "T"]
   ],
   "13. Light": [
+    { text: "The diagram shows a ray of light passing through a rectangular glass block. Explain what happens to the ray at each surface, referring to the marked angles i and r.", marks: 3, d: "M", t: "T", diagram: "refractionBlock" },
     ["State the law of reflection.", 2, "E", "T"],
     ["Define refraction of light.", 1, "E", "T"],
     ["Explain why a ray of light bends towards the normal when entering glass from air.", 2, "M", "T"],
@@ -206,6 +212,7 @@ module.exports = {
     ["The refractive index of water is 1.33. Calculate the critical angle for water.", 3, "H", "S"]
   ],
   "14. Properties of waves": [
+    { text: "The diagram shows a transverse wave. Use the labelled diagram to explain what is meant by the amplitude and the wavelength of the wave.", marks: 2, d: "M", t: "T", diagram: "transverseWave" },
     ["Define the wavelength of a wave.", 1, "E", "T"],
     ["State the difference between transverse and longitudinal waves.", 2, "M", "T"],
     ["Define the frequency of a wave.", 1, "E", "T"],
@@ -241,6 +248,7 @@ module.exports = {
     ["State why exposure to gamma radiation must be carefully controlled in hospitals.", 2, "M", "T"]
   ],
   "16. Magnetism": [
+    { text: "The diagram shows the magnetic field around a bar magnet. State what the arrows on the field lines represent and where the field is strongest.", marks: 2, d: "M", t: "T", diagram: "magnetField" },
     ["State the difference between a permanent magnet and an electromagnet.", 2, "M", "T"],
     ["Describe the magnetic field pattern around a bar magnet.", 2, "M", "T"],
     ["Explain why soft iron is used as the core of an electromagnet.", 2, "M", "T"],

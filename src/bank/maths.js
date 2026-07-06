@@ -38,6 +38,7 @@ module.exports = {
     ["Collect like terms: 8a − 5 + 2a + 7.", 2, "E", "Q"]
   ],
   "3. Lines, angles and shapes": [
+    { text: "In the diagram the two lines are parallel and cut by a transversal. Angle a = 68\u00b0. State the size of angle b and give a reason for your answer.", marks: 2, d: "M", t: "Q", diagram: "parallelLines" },
     ["The angles in a triangle are 2x, 3x and 4x degrees. Find x.", 2, "M", "Q"],
     ["Find the size of each interior angle of a regular hexagon.", 2, "M", "Q"],
     ["Two parallel lines are cut by a transversal. One angle is 68°. State the size of its corresponding angle.", 1, "E", "Q"],
@@ -54,6 +55,7 @@ module.exports = {
     ["Find the number of sides of a regular polygon with interior angle 150°.", 3, "H", "Q"]
   ],
   "4. Collecting, organising and displaying data": [
+    { text: "The pie chart shows how 360 students travel to school. Sector A represents a 90\u00b0 angle. Calculate the number of students represented by sector A.", marks: 2, d: "M", t: "Q", diagram: "pieChart" },
     ["The values 3, 4, 4, 5, 6, 6, 6, 8 are recorded. State the mode.", 1, "E", "Q"],
     ["The frequencies for four groups are 5, 8, 11 and 6. Calculate the total frequency.", 1, "E", "Q"],
     ["Explain why a sample of 10 students from one class may not represent a whole school.", 2, "M", "Q"],
@@ -182,6 +184,7 @@ module.exports = {
     ["Solve the equation x² = 49.", 1, "E", "Q"]
   ],
   "11. Pythagoras' theorem and similar shapes": [
+    { text: "The diagram shows a right-angled triangle. The two shorter sides a and b are 3 cm and 4 cm. Calculate the length of the hypotenuse c.", marks: 2, d: "M", t: "Q", diagram: "rightTriangle" },
     ["A right-angled triangle has hypotenuse 13 cm and one shorter side 5 cm. Find the third side.", 3, "M", "Q"],
     ["A right-angled triangle has shorter sides 9 cm and 12 cm. Calculate the hypotenuse.", 2, "M", "Q"],
     ["Two similar shapes have corresponding lengths 4 cm and 10 cm. Find the scale factor of enlargement.", 1, "E", "Q"],

@@ -17,6 +17,7 @@ module.exports = {
     ["State the term for the change of state from liquid to gas at the boiling point.", 1, "E", "T"]
   ],
   "2. Atomic structure": [
+    { text: "The diagram shows the electronic structure of an atom. State the electronic configuration shown and identify the element.", marks: 2, d: "M", t: "T", diagram: "atomShells" },
     ["State the relative charge and relative mass of a proton, a neutron and an electron.", 3, "M", "T"],
     ["Define the term isotope.", 2, "M", "T"],
     ["Explain why isotopes of the same element have identical chemical properties.", 2, "M", "T"],
@@ -211,6 +212,7 @@ module.exports = {
     ["State the two products formed when ethanol is oxidised by warming with acidified potassium dichromate.", 2, "H", "T"]
   ],
   "20. Petrochemicals and polymers": [
+    { text: "The diagram shows a fractionating column used to separate crude oil. Name the process and explain why different fractions are collected at different heights.", marks: 3, d: "M", t: "T", diagram: "distillationColumn" },
     ["Define addition polymerisation.", 2, "M", "T"],
     ["Describe the difference between a monomer and a polymer.", 2, "E", "T"],
     ["State two environmental problems caused by disposing of plastics in landfill.", 2, "M", "T"],
